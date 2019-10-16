@@ -1,18 +1,11 @@
 <template>
   <van-tabbar active-color="#07c160" inactive-color="#000" v-model="active" route>
-  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-<<<<<<< HEAD
+  <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
   <van-tabbar-item icon="apps-o">分类</van-tabbar-item>
-  <van-tabbar-item icon="orders-o">求购</van-tabbar-item>
-  <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
-	<van-tabbar-item icon="contact" @click="tomine">我的</van-tabbar-item>
-=======
-  <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
   <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
   <van-tabbar-item replace to="/cart" icon="cart-o">购物车</van-tabbar-item>
 	<van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
 	<router-view />
->>>>>>> a22b84ef7c3ca540b18b0565c1fdcb8b9f1460d4
 </van-tabbar>
 </template>
 
@@ -21,28 +14,18 @@ import Vue from 'vue';
 import Vant from 'vant';
 import { Tabbar, TabbarItem } from 'vant';
 import 'vant/lib/index.css';
-import { Grid, GridItem } from 'vant';
-
-Vue.use(Grid).use(GridItem);
 Vue.use(Vant);
 Vue.use(Tabbar).use(TabbarItem);
 export default {
   data() {
     return {
-      active: 0
+      active: 1
     }
-  },
-<<<<<<< HEAD
-  methods:{
-    tomine(){
-      
-    }
-
   }
-=======
->>>>>>> a22b84ef7c3ca540b18b0565c1fdcb8b9f1460d4
 }
 </script>
-<style scoped>
 
+
+<style scoped>
+	
 </style>
