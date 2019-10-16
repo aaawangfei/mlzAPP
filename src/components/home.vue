@@ -4,7 +4,7 @@
   <van-tabbar-item icon="apps-o">分类</van-tabbar-item>
   <van-tabbar-item icon="orders-o">求购</van-tabbar-item>
   <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
-	<van-tabbar-item icon="contact">我的</van-tabbar-item>
+	<van-tabbar-item icon="contact" @click="tomine">我的</van-tabbar-item>
 </van-tabbar>
 </template>
 
@@ -21,11 +21,17 @@ export default {
     return {
       active: 0
     }
+  },
+  methods:{
+    tomine(){
+      
+    }
+
   }
 }
 </script>
 
 
 <style scoped>
-	
+
 </style>

@@ -9,6 +9,18 @@ export default new Router({
       path: '/',
       name: 'home',
       component: home
+    },
+    {
+      path: '/mineIndex',
+      name: 'mineIndex',
+
+      component: () => import('../components/mine/mineIndex')
+    },
+    {
+      path: '/accountSet',
+      name: 'accountSet',
+
+      component: () => import('../components/mine/accountSet')
     }
   ]
 })
