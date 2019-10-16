@@ -12,22 +12,22 @@ export const homeRouter=[
     	{
     	  path: '/cart',
     	  name: 'cart',
-    	  component: () => import('@/components/cart'),
+    	  component: () => import('@/components/cart/cart'),
     	},
     	{
     	  path: '/contact',
     	  name: 'contact',
-    	  component: () => import('@/components/contact'),
+    	  component: () => import('@/components/contact/contact'),
     	},
     	{
     	  path: '/apps',
     	  name: 'apps',
-    	  component: () => import('@/components/apps'),
+    	  component: () => import('@/components/apps/apps'),
     	},
     	{
     	  path: '/orders',
     	  name: 'orders',
-    	  component: () => import('@/components/orders'),
+    	  component: () => import('@/components/orders/orders'),
     	}
   ];
 let routes = new Set([...homeRouter,...myRouter,...loginRouter]);
