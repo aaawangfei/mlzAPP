@@ -6,10 +6,12 @@ import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyload from 'vue-lazyload'
 import 'swiper/dist/css/swiper.css'
+import { Image } from 'vant';
 import {
 	Button,
 	Carousel,
-	CarouselItem
+	CarouselItem,
+
 	} from 'element-ui'
 Vue.use(Button)
 Vue.use(Carousel)
@@ -17,6 +19,7 @@ Vue.use(CarouselItem)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueLazyload)
 Vue.config.productionTip = false
+Vue.use(Image);
 
 /* eslint-disable no-new */
 new Vue({

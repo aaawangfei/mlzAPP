@@ -16,7 +16,22 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+
       component: () => import('@/components/home'),
+    },
+    {
+      path: '/mineIndex',
+      name: 'mineIndex',
+
+      component: () => import('../components/mine/mineIndex')
+    },
+    {
+      path: '/accountSet',
+      name: 'accountSet',
+
+      component: () => import('../components/mine/accountSet')
+ 
+      
     },
 		{
 		  path: '/cart',
@@ -58,5 +73,6 @@ export default new Router({
 		  name: 'login',
 		  component: () => import('@/components/login'),
 		}
+
   ]
 })
