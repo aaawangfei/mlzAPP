@@ -1,5 +1,5 @@
 <template>
-  <van-tabbar active-color="#07c160" inactive-color="#000" v-model="active" route>
+  <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
   <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
   <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
   <van-tabbar-item icon="orders-o">求购</van-tabbar-item>

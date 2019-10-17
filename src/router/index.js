@@ -28,7 +28,12 @@ export const homeRouter=[
     	  path: '/orders',
     	  name: 'orders',
     	  component: () => import('@/components/orders/orders'),
-    	}
+    	},
+			{
+			  path: '/goodslist',
+			  name: 'goodslist',
+			  component: () => import('@/components/goodslist'),
+			}
   ];
 let routes = new Set([...homeRouter,...myRouter,...loginRouter]);
 export default new Router({
