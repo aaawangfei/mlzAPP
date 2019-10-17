@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import myRouter from './modules/my'
 import loginRouter from './modules/login'
+import orders from './modules/buying'
 Vue.use(Router)
 export const homeRouter=[
     {
@@ -30,7 +31,7 @@ export const homeRouter=[
     	  component: () => import('@/components/orders/orders'),
     	}
   ];
-let routes = new Set([...homeRouter,...myRouter,...loginRouter]);
+let routes = new Set([...homeRouter,...myRouter,...loginRouter,...orders]);
 export default new Router({
   routes: routes
 })
