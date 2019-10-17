@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <van-tabs v-model="segementIndex" animated title-active-color="#ee0a24" :swipeable="true" style="width:100%;">
      
@@ -80,6 +81,8 @@
 	  <router-view />
     </van-tabbar> -->
   </div>
+
+  
 </template>
 
 <script>

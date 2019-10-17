@@ -83,7 +83,7 @@
 								</van-grid-item>
 							</van-grid>
 							</div>
-							<van-tabs @click="onClick">
+							<van-tabs @click="onClick" background="#F2F2F2" color="#E33B3E" title-inactive-color="#333333" title-active-color="#E33B3E" line-width="55px">
 	<div class="hzsj">
   <van-tab title="推荐产品">
 		<van-grid :gutter="10" :column-num="2" :border="false">
@@ -193,18 +193,8 @@
 	</van-tab>
 	</div>
 </van-tabs>
-		<router-view />
-  <van-tabbar active-color="#07c160" inactive-color="#000" v-model="active" route>
 
-  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-
-  <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
-  <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
-  <van-tabbar-item replace to="/cart" icon="cart-o">购物车</van-tabbar-item>
-	<van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
-	
-
-</van-tabbar>
+ 
 </div>
 </template>
 
@@ -295,26 +285,26 @@ export default {
 		text-align: right;
 	}
 	.hot-rent-item img {
-    width: 80px;
-    height: auto;
+        width: 80px;
+        height: auto;
 		display: block;
 		margin: 15px auto;
 		margin-bottom: 15px ;
-  }
+    }
 	.hot-rent-item .price {
-    font-size: 13px;
-    color: #333333;
-		float: left;
-  }
-  .cored{
-	color: #E33B3E;
-  }
+        font-size: 13px;
+        color: #333333;
+	    float: left;
+    }
+    .cored{
+	    color: #E33B3E;
+    }
 	.bor{
 		color: #F5A623!important;
 		border: 1px solid #F5A623;
 		margin-left: -97px;
-    display: block;
-    margin-top: 23px;
+        display: block;
+        margin-top: 23px;
 		border-radius: 3px;
 		padding: 0 5px;
 		font-size: 10px!important;
@@ -332,6 +322,8 @@ export default {
 		height: 40px; 
 		margin-bottom: 3px;
 	}
-
+    .van-grid-item__content--center{
+	    background-color: #F2F2F2!important;
+    }
 </style>
 
