@@ -5,9 +5,9 @@ import Router from 'vue-router'
 Vue.use(Vant);
 Vue.use(Router)
 export default [
-	//  {
-	//   path: '/orders',
-	//   name: 'orders',
-	//   component: () => import('@/components/orders/orders')
-	// }
+	 {
+	  path: '/shopDetail',
+	  name: 'shopDetail',
+	  component: () => import('@/components/orders/shopDetail')
+	}
 ]
