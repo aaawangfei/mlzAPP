@@ -125,10 +125,11 @@ export default {
       this.show = true ;
     },
     showShopVC() {
-
+      
+      this.$router.push('applyRent')
     },
     showRent() {
-
+      this.$router.push('applyRent')
     },
     cellClick(item) {
       this.$router.push('shopDetail')

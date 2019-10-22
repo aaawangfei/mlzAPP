@@ -101,9 +101,9 @@ export default {
     flex-direction: row;
 
   }
-  .userinfo-img-container {
+  /* .userinfo-img-container {
 
-  }
+  } */
   .van-divider {
     margin: 10px 0px ;
   }
