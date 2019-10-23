@@ -95,14 +95,14 @@
   .imgleft {
     float: left;
     padding: 10px;
-
-
   }
 
   .iwordright {
     float: left;
 
+
   }
 
   .ellipse {}
+
 </style>

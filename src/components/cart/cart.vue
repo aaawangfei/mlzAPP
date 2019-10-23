@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <div>
       <van-nav-bar title="购物车" right-text="编辑" @click-right="onClickRight" />
@@ -53,17 +54,18 @@
 
     </div>
     <div>
-      <van-tabbar active-color="#07c160" inactive-color="#000" v-model="active" route>
-        <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
-        <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
-        <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
-        <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
-        <van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
-        <router-view />
-      </van-tabbar>
+     <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
+       <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+       <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
+       <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
+       <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
+     	<van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
+     	<router-view />
+     </van-tabbar>
     </div>
 
   </div>
+
 </template>
 
 <script>
