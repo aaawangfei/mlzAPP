@@ -1,8 +1,22 @@
 <template>
 
   <div>
+    <img  @click="showSelectPlat" src="https://img.yzcdn.cn/vant/cat.jpeg" style="width: 3rem;height: 3rem;position: fixed;bottom: 4rem;right: 0.5rem;z-index: 9999;" />
+    <van-popup round v-model="show" :style="{height: '177px',width: '75%'}">
+      <div style="display:flex;flex-wrap: nowrap;justify-content:space-around;align-items:center;height: 100%;">
+        <div @click="showRent" style="display:flex;flex-direction:column;">
+          <img src="https://img.yzcdn.cn/vant/cat.jpeg" alt="" style="width:72px ;height: 72px ;">
+          <p>求租</p>
+        </div >
+        <div  @click="showShopVC" style="display:flex;flex-direction:column;">
+          <img src="https://img.yzcdn.cn/vant/cat.jpeg" alt="" style="width:72px ;height: 72px ;">
+          <p>求购</p>
+        </div>
+      </div>
+    </van-popup>
     <van-tabs v-model="segementIndex" animated title-active-color="#ee0a24" :swipeable="true" style="width:100%;">
      
+
       <van-tab title="求租">
           <van-list
             v-model="loading"
@@ -13,7 +27,8 @@
             <van-cell
               v-for="item in leftList"
               :key="item"
-              title="item">
+              title="item"
+              @click="cellClick(item)">
             <template slot="title">
               <div style="display: flex ;">
                     <van-image
@@ -46,7 +61,8 @@
             <van-cell
               v-for="item in rightList"
               :key="item"
-              title="item">
+              title="item"
+              @click="cellClick(item)">
             <template slot="title">
               <div style="display: flex ;">
                     <van-image
@@ -97,9 +113,26 @@ export default {
   data() {
     return {
       active: 2,
+      show:false ,
       segementIndex: 0,
       leftList:["","","","","","","","","","","","","","","","","","","","","","","",""],
       rightList:["","","","","","","","","","","","","","","","","","","","","","","",""]
+    }
+  },
+  methods: {
+    showSelectPlat() {
+      console.log('------->');
+      this.show = true ;
+    },
+    showShopVC() {
+      
+      this.$router.push('applyRent')
+    },
+    showRent() {
+      this.$router.push('applyRent')
+    },
+    cellClick(item) {
+      this.$router.push('shopDetail')
     }
   }
 }

@@ -66,9 +66,9 @@
     <div style="height: 10px;"></div>
 
     <div style="background: white;border-radius:5px; padding-top: 2px;">
-    <p style="float: left; height: 10px;padding-left: 20px;">我的应用</p>
+      <p style="float: left; height: 10px;padding-left: 20px;">我的应用</p>
 
-    <p style="background: #f2f2f2;width: 100%;height: 1px; float: left; "></p>
+      <p style="background: #f2f2f2;width: 100%;height: 1px; float: left; "></p>
       <van-grid column-num="4" :border="false" gutter="3" square="false">
 
         <van-grid-item icon="photo-o" text="合同管理" />
@@ -82,9 +82,9 @@
 
     <div style="background: white;border-radius:5px; padding-top: 2px;">
 
-        <p style="float: left; height: 10px;padding-left: 20px;">服务应用</p>
+      <p style="float: left; height: 10px;padding-left: 20px;">服务应用</p>
 
-        <p style="background: #f2f2f2;width: 100%;height: 1px; float: left;"></p>
+      <p style="background: #f2f2f2;width: 100%;height: 1px; float: left;"></p>
 
       <van-grid column-num="4" :border="false" gutter="3" square="false">
 
