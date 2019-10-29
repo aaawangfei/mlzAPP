@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import myRouter from './modules/my'
 import loginRouter from './modules/login'
 import orders from './modules/buying'
+import merchantsRouter from './modules/merchants'
 Vue.use(Router)
 export const homeRouter=[
     {
@@ -34,9 +35,34 @@ export const homeRouter=[
 			  path: '/goodslist',
 			  name: 'goodslist',
 			  component: () => import('@/components/goodslist'),
+			},
+			{
+			  path: '/goodsdetail',
+			  name: 'goodsdetail',
+			  component: () => import('@/components/goodsdetail'),
+			},
+			{
+			  path: '/addresslist',
+			  name: 'addresslist',
+			  component: () => import('@/components/addresslist'),
+			},
+			{
+			  path: '/editaddress',
+			  name: 'editaddress',
+			  component: () => import('@/components/editaddress'),
+			},
+			{
+			  path: '/sureorder',
+			  name: 'sureorder',
+			  component: () => import('@/components/sureorder'),
+			},
+			{
+			  path: '/address',
+			  name: 'address',
+			  component: () => import('@/components/address'),
 			}
   ];
-let routes = new Set([...homeRouter,...myRouter,...loginRouter,...orders]);
+let routes = new Set([...homeRouter,...myRouter,...loginRouter,...orders,...merchantsRouter]);
 export default new Router({
   routes: routes
 })

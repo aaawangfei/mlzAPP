@@ -58,13 +58,13 @@ export default {
 	}
 	.leftnav{
 		float: left;
-		margin-left: 10px;
-		margin-top: 10px;
+		margin-left: 13px;
+		margin-top: 15px;
 	}
 	.rightnav{
 		float: right;
-		margin-right: 10px;
-		margin-top: 10px;
+		margin-right: 13px;
+		margin-top: 15px;
 	}
 	.van-field__left-icon {
     margin-right: -81px!important;
@@ -89,8 +89,12 @@ export default {
 		width: 90%;
 		border-radius: 30px;
 		border: 0;
-		margin-top: 40px;
 		color: #FFFFFF;
 		background-color:#E33B3E;
+		display: block;
+		margin: 0 auto;
+	}
+	.van-cell-group{
+		margin-bottom: 80px;
 	}
 </style>

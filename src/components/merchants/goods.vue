@@ -3,11 +3,25 @@
 		<div class="topback">
 		<div class="nav">
 			<span class="leftnav">
-				<van-icon name="arrow-left" />
+				<van-icon color="#FFFFFF" name="arrow-left" />
 			</span>
 			<span class="rightnav">
-				<van-search shape="round" placeholder="采煤机配件降价" v-model="value" />
+				<van-search shape="round" background="#E33B3E" placeholder="采煤机配件降价" v-model="value" />
 				</span>
+		</div>
+		<div class="nav">
+		<div class="leftimg">
+			<img class="img" src="../../assets/Home/今日进程.png" alt="">
+		</div>
+		<div class="rightwords">
+			<p class="right">
+				<span class="tit">思匠德</span>
+				<span class="time">123人关注</span>
+				</p>
+			<p class="Introduction">
+				<van-button class="gz" slot="button" size="mini">关注</van-button>
+				</p>
+		</div>
 		</div>
 		<div class="row">
         <div class="col-xs-5ths">
@@ -17,7 +31,7 @@
         </div>
         <div class="col-xs-5ths">
           <van-dropdown-menu>
-             <van-dropdown-item color="#FFFFFF" v-model="value2" :options="option2" />
+             <van-dropdown-item v-model="value2" :options="option2" />
           </van-dropdown-menu>
         </div>
         <div class="col-xs-5ths">
@@ -41,60 +55,68 @@
   <van-cell v-for="item in list" :key="item" :title="item"/>
 	      <div class="nav bor-bottom">
 	      <div class="leftimg">
-	      	<img class="img" src="../assets/Home/今日进程.png" alt="">
+	      	<img class="img" src="../../assets/Home/今日进程.png" alt="">
 	      </div>
 	      <div class="rightwords">
 	      	<p class="right">
 	      		<span class="tit titlist">采煤机配件导向靶CON02</span>
-	      		<span class="time timelist">￥3473</span>
 	      		</p>
-	      	<p class="Introduction icontop">
-	      		<van-icon name="award-o" />
+	      	<p>
+				<span class="time timelist">￥3473</span>
+	      		<van-icon class="Introduction icontop" color="#E33B3E" name="shopping-cart-o" />
 	      		</p>
 	      </div>
 	      </div>
 </van-list>
+  <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
+  <van-tabbar-item icon="shop-o">商品</van-tabbar-item>
+  <van-tabbar-item replace to="/goodsclass" icon="qr">分类</van-tabbar-item>
+  <van-tabbar-item replace to="/Aboutus" icon="contact">关于我们</van-tabbar-item>
+	<router-view />
+</van-tabbar>
 </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import Vant from 'vant';
+import { Tabbar, TabbarItem } from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
+Vue.use(Tabbar).use(TabbarItem);
 export default {
   data() {
     return {
-      active: 1,
-			value1: 0,
-      value2: 'a',
-			value3: 'a',
-			value4: 'a',
-			value:'',
-			list: [],
-      loading: false,
-      finished: false,
-      option1: [
+        active: 0,
+		value1: 0,
+        value2: 'a',
+	    value3: 'a',
+		value4: 'a',
+		value:'',
+		list: [],
+        loading: false,
+        finished: false,
+        option1: [
         { text: '价格', value: 0 },
         { text: '价格1', value: 1 },
         { text: '价格2', value: 2 },
-				{ text: '价格3', value: 3 }
-      ],
-      option2: [
+		{ text: '价格3', value: 3 }
+        ],
+        option2: [
         { text: '交货期', value: 'a' },
         { text: '1月', value: 'b' },
         { text: '2月', value: 'c' },
-      ],
-			option3: [
-			  { text: '仓库', value: 'a' },
-			  { text: '斯柯达', value: 'b' },
-			  { text: '耐克', value: 'c' },
-			],
-			option4: [
-			  { text: '类型', value: 'a' },
-			  { text: '塑料', value: 'b' },
-			  { text: '钢铁', value: 'c' },
-			]
+        ],
+		option3: [
+		{ text: '仓库', value: 'a' },
+		{ text: '斯柯达', value: 'b' },
+		{ text: '耐克', value: 'c' },
+		],
+		option4: [
+		{ text: '类型', value: 'a' },
+		{ text: '塑料', value: 'b' },
+		{ text: '钢铁', value: 'c' },
+		]
     }
   },
 	methods: {
@@ -112,7 +134,7 @@ export default {
 	.leftnav{
 		float: left;
 		margin-top: 19px;
-	  width: 10%;
+	    width: 10%;
 		margin-left: 16px;
 	}
 	.rightnav{
@@ -121,7 +143,11 @@ export default {
 		width: 85%;
 	}
 	.topback{
+		background-color: #E33B3E;
 		width: 100%;
+	}
+	.van-search__content{
+		background-color: #FFFFFF;
 	}
 	.leftimg{
 		float: left;
@@ -139,8 +165,8 @@ export default {
 		padding-bottom: 20px;
 	}
 	.right{
-		margin-top: 21px;
-		float: left;
+		margin-top: 18px;
+		text-align: left;
 	}
 	.tit{
 		float: left;
@@ -148,31 +174,34 @@ export default {
 		color: #FFFFFF;
 		font-size: 14px;
 		width: 100%;
-    text-align: left;
-		margin-top: 3px;
+        text-align: left;
+		margin-top: 6px;
 	}
 	.time{
 		float: left;
-	  margin-left: 10px;
-	  color: #FFFFFF;
+	    margin-left: 10px;
+	    color: #FFFFFF;
 		font-size: 10px;
-		width: 100%;
-    text-align: left;
+        text-align: left;
 		margin-top: 10px;
 	}
 	.Introduction{
 		float: right;
-		margin-right: 18px;
+		margin-right: 16px;
 		font-size: 13px;
-		margin-top: 32px;
+		margin-top: -7px;
 	}
 	.gz{
 		color: #E33B3E;
 		border-radius: 20px;
+		line-height: 22px;
 	}
 	.col-xs-5ths{ 
 		width:20%; 
 		float:left;
+	}
+	.van-dropdown-menu{
+		background-color: #E33B3E;
 	}
 	.iconr{
 		margin: 16px auto;
@@ -183,14 +212,14 @@ export default {
 	.timelist{
 		color: #E33B3E;
 	}
-	.icontop{
-		margin-top: 57px;
-	}
 	.bor-bottom{
 		border-bottom: 1px solid #F2F2F2;
 	}
-	.van-search {
-	  padding: 10px 16px;
+	.van-search{
+		padding: 10px 16px;
 		margin-top: 5px;
+	}
+	.icontop{
+		margin-top: 10px;
 	}
 </style>

@@ -8,15 +8,16 @@
 	<van-cell-group>
   <van-field
     v-model="phone"
-		right-icon="arrow-down"
-		label="+86"
+	label="+86"
+	class="phone"
     placeholder="请输入手机号码"
   />
+  <van-icon class="phoneicon" name="arrow-down" />
   <van-field
     v-model="yzm"
     center
     clearable
-		style="color: #999999;"
+	style="color: #999999;"
     placeholder="输入验证码"
   >
     <van-button class="time" slot="button" size="mini">20s</van-button>
@@ -27,7 +28,6 @@
 <p class="cxget">没收到验证码？等倒计时结束后重新获取</p>
 </div>
 </template>
-
 <script>
 import Vue from 'vue';
 import Vant from 'vant';
@@ -41,13 +41,11 @@ export default {
   }
 }
 </script>
-
-
 <style scoped>
 	.leftnav{
 		float: left;
-		margin-left: 10px;
-		margin-top: 10px;
+		margin-left: 13px;
+		margin-top: 15px;
 	}
 	.van-field__left-icon {
     margin-right: -81px!important;
@@ -70,13 +68,25 @@ export default {
 		width: 90%;
 		border-radius: 30px;
 		border: 0;
-		margin-top: 40px;
 		color: #FFFFFF;
 		background-color:#E33B3E;
+		display: block;
+		margin: 0 auto;
+	}
+	.van-cell-group{
+		margin-bottom: 40px;
 	}
 	.cxget{
 		text-align: left;
 		margin-left: 5%;
 		color: #888888;
+	}
+	.phone{
+		position: relative;
+	}
+	.phoneicon{
+		position: absolute;
+		left: 57px;
+		top:12px;
 	}
 </style>
