@@ -1,15 +1,40 @@
 <template>
 
-  <div>
+  <div >
 
-      <div >
-        <van-nav-bar title="购物车" right-text="编辑" @click-right="onClickRight" :border="false" />
-      </div>
+    <div>
+      <van-nav-bar title="商品收藏" :right-text="titile" @click-right="onClickRight" :border="false" left-arrow @click-left="onClickLeft"/>
+    </div>
 
+    <div class="allfix">
       <div>
-
         <van-list v-model="loading" :finished="finished" @load="onLoad">
-          <van-cell v-for="item in goods" :key="item.id" :name="item.id">
+          <van-cell v-if="show" v-for="item in goods" :key="item.id" :name="item.id">
+            <div style=" padding: 10px;">
+              <div style="display: flex; border-radius: 5px;">
+                <div>
+
+                    <div>
+                      <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                    </div>
+                  </van-checkbox>
+                </div>
+                <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;">
+                  <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
+                  <div style="display: flex;justify-content: space-between;">
+                    <p>￥3400</p>
+                    <p>
+
+                      <van-icon name="shopping-cart-o" />
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </van-cell>
+          <van-cell v-else v-for="item in goods" :key="item.id" :name="item.id">
             <div style=" padding: 10px;">
               <div style="display: flex; border-radius: 5px;">
                 <div>
@@ -21,9 +46,12 @@
                 </div>
                 <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;">
                   <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
-                  <div style="display: flex;justify-content: flex-star;">
+                  <div style="display: flex;justify-content: space-between;">
                     <p>￥3400</p>
-                    <van-stepper style="margin-left: 20%;" v-model="item.num" />
+                    <p>
+
+                      <van-icon name="shopping-cart-o" />
+                    </p>
                   </div>
                 </div>
               </div>
@@ -32,49 +60,29 @@
           </van-cell>
 
         </van-list>
-
-
       </div>
 
 
 
-      <div>
-        <div>
-          <div class="submi-bar__bar">
-            <div v-if="show" class="van-submit-bar">
-              <van-checkbox v-model="checked">全选</van-checkbox>
-              <span style="text-align: -moz-center; width: 40%;"> 合计:￥7386</span>
-              <span style="text-align: -moz-center; width: 40%;"> 去结算</span>
-            </div>
-            <div v-else class="van-submit-bar">
+        <div v-if="!show" class="van-submit-bar">
 
-              <van-checkbox v-model="checked">全选</van-checkbox>
+          <van-checkbox v-model="checked">全选</van-checkbox>
 
-              <span style="text-align: -moz-center; width: 40%;"></span>
-              <span style="text-align: -moz-center;width: 40%"> 删除</span>
-            </div>
-
-
-            <!-- <van-submit-bar :price="totalPrice" :disabled="!checkedGoods.length" :button-text="submitBarText" @submit="onSubmit" /> -->
-          </div>
-
-
+          <span style="text-align: -moz-center; width: 40%;"></span>
+          <span style="text-align: -moz-center;width: 40%"> 删除</span>
         </div>
 
 
-      </div>
-      <div>
-        <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
-          <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
-          <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
-          <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
-          <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
-          <van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
-          <router-view />
-        </van-tabbar>
-      </div>
+
 
     </div>
+
+
+
+
+
+
+  </div>
 
 </template>
 
@@ -107,6 +115,7 @@
     data() {
       return {
         active: 3,
+        titile: "编辑",
         checkedGoods: ['1', '2', '3'],
         goods: [{
             id: '1',
@@ -174,8 +183,10 @@
 
       onClickRight() {
         if (this.show) {
+          this.titile="完成";
           this.show = false;
         } else {
+          this.titile="编辑";
           this.show = true;
         }
 
@@ -267,22 +278,13 @@
     }
   }
 
-  .submi-bar__bar {
-    display: -webkit-box;
-    display: -webkit-flex;
+  .allfix {
+
     display: flex;
-    // position: absolute;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-    // height: 50px;
-    // font-size: 14px;
-    // left: 0px;
-    // right: 0px;
-    // bottom: 50px;
+
+    justify-content: space-between;
+
+
   }
 
   div {
@@ -296,7 +298,7 @@
 
     line-height: 50px;
     display: flex;
-    bottom: 55px !important;
+
   }
 
 
@@ -313,25 +315,27 @@
   .van-list {
     // margin-bottom: 100px;
   }
-  .van-cell {
-      background: #f2f2f;
-      position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      box-sizing: border-box;
-      width: 100%;
 
-      overflow: hidden;
-      color: #323233;
-      font-size: 14px;
-      line-height: 24px;
-      background-color: #F2F2F2;
+  .van-cell {
+    background: #f2f2f;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+
+    overflow: hidden;
+    color: #323233;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #F2F2F2;
   }
+
   .van-cell__value--alone {
-      color: #323233;
-      text-align: left;
-      border-radius:5px ;
-      background-color: #FFFFFF;
+    color: #323233;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #FFFFFF;
   }
 </style>
