@@ -39,6 +39,42 @@ export default [
     path: '/enterpriseCertification',
     name: 'enterpriseCertification',
     component: () => import('@/components/mine/enterpriseCertification')
+  },
+  {
+    path: '/mineOrder',
+    name: 'mineOrder',
+    component: () => import('@/components/mineorders/mineOrder')
+  },
+  {
+    path: '/paymentDetails',
+    name: 'paymentDetails',
+    component: () => import('@/components/mineorders/paymentDetails')
+  },
+  {
+    path: '/shippingDetails',
+    name: 'shippingDetails',
+    component: () => import('@/components/mineorders/shippingDetails')
+  },
+  {
+    path: '/browseRecord',
+    name: 'browseRecord',
+    component: () => import('@/components/mineorders/browseRecord')
+  },
+  {
+    path: '/goodsCollection',
+    name: 'goodsCollection',
+    component: () => import('@/components/mineorders/goodsCollection')
+  },
+  {
+    path: '/DemandRelease',
+    name: 'DemandRelease',
+    component: () => import('@/components/mineorders/DemandRelease')
+  },
+  {
+    path: '/purchaseOrder',
+    name: 'purchaseOrder',
+    component: () => import('@/components/mineorders/purchaseOrder')
   }
-  
+
+
 ]
