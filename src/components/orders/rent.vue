@@ -76,7 +76,12 @@ export default {
 				message: ""
 
     }
-  }
+	},
+	methods: {
+		onClickLeft() {
+			this.$router.go(-1);
+		}
+	}
 }
 </script>
 

@@ -78,7 +78,7 @@ export default {
       this.current = index;
       },
       onClickLeft() {
-        this.router.go(-1);
+        this.$router.go(-1);
       }
     
   }
