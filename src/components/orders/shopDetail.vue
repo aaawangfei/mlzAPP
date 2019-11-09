@@ -126,10 +126,11 @@ export default {
  }
  .bottom-container {
    display: flex;
+   background: white;
    flex-direction: row;
    justify-content: center;
    height:45px ;
-   position: absolute;
+   position: fixed;
    right:0px ;
    bottom: 0px ;
    left: 0px ;

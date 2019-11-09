@@ -14,5 +14,16 @@ export default [
 	  path: '/applyRent',
 	  name: 'applyRent',
 	  component: () => import('@/components/orders/rent')
-	}
+	},
+	{
+	  path: '/applyRefund',
+	  name: 'applyRefund',
+	  component: () => import('@/components/mine/refund/applyRefund')
+	},
+	{
+	  path: '/logistics',
+	  name: 'logistics',
+	  component: () => import('@/components/mine/refund/logistics')
+	},
+	
 ]
