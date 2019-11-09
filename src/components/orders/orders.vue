@@ -1,19 +1,20 @@
 <template>
 
   <div>
-    <img  @click="showSelectPlat" src="https://img.yzcdn.cn/vant/cat.jpeg" style="width: 3rem;height: 3rem;position: fixed;bottom: 4rem;right: 0.5rem;z-index: 9999;" />
+    <img  @click="showSelectPlat" src="../../assets/Home/add.png" style="width: 3rem;height: 3rem;position: fixed;bottom: 4rem;right: 0.5rem;z-index: 9999;" />
     <van-popup round v-model="show" :style="{height: '177px',width: '75%'}">
       <div style="display:flex;flex-wrap: nowrap;justify-content:space-around;align-items:center;height: 100%;">
         <div @click="showRent" style="display:flex;flex-direction:column;">
-          <img src="https://img.yzcdn.cn/vant/cat.jpeg" alt="" style="width:72px ;height: 72px ;">
-          <p>求租</p>
-        </div >
+          <img src="../../assets/Home/rent.png" alt="" style="width:72px ;height: 72px ;">
+          <p style="text-align: center;margin-top: 5px;">求租</p>
+        </div>
         <div  @click="showShopVC" style="display:flex;flex-direction:column;">
-          <img src="https://img.yzcdn.cn/vant/cat.jpeg" alt="" style="width:72px ;height: 72px ;">
-          <p>求购</p>
+          <img src="../../assets/Home/buy.png" alt="" style="width:72px ;height: 72px ;">
+          <p style="text-align: center;margin-top: 5px;">求购</p>
         </div>
       </div>
     </van-popup>
+	<!-- <img style="position:absolute;right: 10px;top:8px;z-index: 11;width: 30px;height: 30px;" src="../../assets/Home/search.png" alt=""> -->
     <van-tabs v-model="segementIndex" animated title-active-color="#ee0a24" :swipeable="true" style="width:100%;">
      
 
@@ -31,10 +32,10 @@
               @click="cellClick(item)">
             <template slot="title">
               <div style="display: flex ;">
-                    <van-image
+                    <img
                     width="36%"
                     height="96"
-                    src="https://img.yzcdn.cn/vant/cat.jpeg"/>
+                    src="../../assets/Home/Bitmap.png"/>
                     <div class="cell-text" style="width:64%;">
                           <p >双滚筒电牵采煤机型号BYasdasdasdasdasdas</p>
                           <p >7839一台</p>
@@ -65,10 +66,10 @@
               @click="cellClick(item)">
             <template slot="title">
               <div style="display: flex ;">
-                    <van-image
+                    <img
                     width="36%"
                     height="96"
-                    src="https://img.yzcdn.cn/vant/cat.jpeg"/>
+                    src="../../assets/Home/Bitmap.png"/>
                     <div class="cell-text" style="width:64%;">
                           <p >双滚筒电牵采煤机型号BYasdasdasdasdasdas</p>
                           <p >7839一台</p>
@@ -93,7 +94,7 @@
     <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
     <van-tabbar-item icon="orders-o">求购</van-tabbar-item>
     <van-tabbar-item replace to="/cart" icon="cart-o">购物车</van-tabbar-item>
-    <van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
+    <van-tabbar-item replace to="/mineIndex" icon="contact">我的</van-tabbar-item>
 	  <router-view />
     </van-tabbar>
   </div>
@@ -126,7 +127,7 @@ export default {
     },
     showShopVC() {
       
-      this.$router.push('applyRent')
+      this.$router.push('applybuy')
     },
     showRent() {
       this.$router.push('applyRent')

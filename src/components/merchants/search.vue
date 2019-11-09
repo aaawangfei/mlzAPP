@@ -6,7 +6,10 @@
         </form>
 	  </div>
 	  <div class="nav">
-	  	<span class="leftnav">搜索历史</span><span class="rightnav">图标</span>
+	  	<span class="leftnav">搜索历史</span>
+		<span class="rightnav">
+		    <img src="../../assets/Home/dele.png" alt="">
+		</span>
 	  </div>
 	  <van-row>
        <van-col span="6">
@@ -36,7 +39,10 @@
 	  </van-row>
 	<p class="more">更多搜索历史<van-icon name="arrow-down" /></p>
 	<div class="nav">
-		<span class="leftnav">搜索发现</span><span class="rightnav">图标</span>
+		<span class="leftnav">搜索发现</span>
+		<span class="rightnav">
+			<img src="../../assets/Home/look.png" alt="">
+		</span>
 	</div>
 	<van-row>
 	 <van-col span="6">
@@ -106,6 +112,9 @@ export default {
 		float: right;
 		margin-right: 16px;
 		margin-top: 10px;
+	}
+	.rightnav img{
+		width: 20px;
 	}
 	.more{
 		font-weight: bold;

@@ -13,7 +13,7 @@
 </div>
 <div class="footer">
 	<div class="leftimg">
-		<img class="img" src="../../assets/Home/今日进程.png" alt="">
+		<img class="img" src="../../assets/Home/daoxiangba.png" alt="">
 	</div>
 	<div class="rightwords">
 		<span class="Introduction">您购买的采煤机配件CNF06347858订单已签收！</span>
@@ -52,7 +52,7 @@ export default {
 <style scoped>
 	.status{
 		float: left;
-		width: 36%;
+		width: 37%;
 		color: #333333;
 		font-size: 14px;
 		text-align: center;
@@ -84,6 +84,9 @@ export default {
 		color: #666666;
 		font-size: 13px;
 		text-align: justify;
+		word-wrap: break-word;
+		word-break: break-all;
+		overflow: hidden;
 	}
 	.submit{
 		border-radius: 20px;

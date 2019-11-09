@@ -6,23 +6,21 @@
     <div style="background: white; border-bottom-right-radius: 5px; border-bottom-left-radius:5px;overflow: hidden;">
       <div style="overflow: hidden;">
         <div class="iwordleft">
-          <p style="color: #333333; vertical-align: middle; margin-left: 10px;">王花花</p>
+          <p style="color: #333333; vertical-align: middle; margin-left: 16px;">王花花</p>
         </div>
         <div class="imgright">
               <div class="tablebox">
                   <div id="imgbox">
-
                       <van-image round width="5rem" height="5rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-
                   </div>
               </div>
-              <div style="float: right;">
+              <div style="float: right;margin-right: 13px;">
               <van-icon style="line-height: 112px;" name="arrow" />
               </div>
           </div>
       </div>
       <div style="background: #f2f2f2; height: 1px;"/>
-      <div style="background: white; border-radius:5px; overflow: hidden; padding-left: 10px;padding-right: 10px;">
+      <div style="background: white; border-radius:5px; overflow: hidden; padding-left: 6px;padding-right: 6px;">
         <div style="overflow: hidden; line-height: 50px;">
           <span style="float: left;color: #333333;vertical-align: middle; margin-left: 10px;">公司名称</span>
           <span style="float: right; color: #333333;vertical-align: middle; margin-right: 10px;">
@@ -88,5 +86,7 @@
   width: 80px;
   margin-right: 10px;
   }
-
+.van-nav-bar .van-icon{
+		color: #2c3e50;
+	}
 </style>

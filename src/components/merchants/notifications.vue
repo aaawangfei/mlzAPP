@@ -13,7 +13,7 @@
 </div>
 <div class="footer">
 	<div class="leftimg">
-		<img class="img" src="../../assets/Home/今日进程.png" alt="">
+		<img class="img" src="../../assets/Home/artisan.png" alt="">
 	</div>
 	<div class="rightwords">
 		<span class="Introduction">您关注的思匠德店铺，有新的产品上新了!</span>
@@ -59,7 +59,7 @@ export default {
 	}
 	.leftimg{
 		float: left;
-		width: 36%;
+		width: 30%;
 	}
 	.img{
 		width: 80px;

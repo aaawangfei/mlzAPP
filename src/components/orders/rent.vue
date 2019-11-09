@@ -2,7 +2,7 @@
   <div class="app-container" >
     <div class="app-container" style="margin-bottom: 60px ;">
       <!-- class="vanNavBars" -->
-			<van-nav-bar  title="用车申请" left-arrow @click-left="onClickLeft" @click-right="onClickRight" />
+			<van-nav-bar  title="发布求租" left-arrow @click-left="onClickLeft" @click-right="onClickRight" />
 			<!-- <scrollview> -->
 			<div class="carContent">
 				<van-cell-group>
@@ -43,7 +43,14 @@
 		
 		</div>
 		<div class="bottom-btn-container">
-
+<van-row gutter="32" style="width: 100%;">
+  <van-col span="12">
+	  <van-button style="background: #E33B3E;color: #FFFFFF;" round>保存草稿</van-button>
+  </van-col>
+  <van-col span="12">
+	  <van-button style="background: #F2B741;color: #FFFFFF;" round>提交</van-button>
+  </van-col>
+</van-row>
 		</div>
 
   </div>
@@ -90,7 +97,6 @@ p {
 		padding: 0px;
 		height: 1px;
 	}
-	
 	.bold-line {
 		height: 10px;
 	}
@@ -105,13 +111,17 @@ p {
 	.bottom-btn-container {
 		height: 50px ;
 		display: flex;
-   flex-direction: row;
-   justify-content: center;
-   position: absolute;
-   right:0px ;
-   bottom: 0px ;
-   left: 0px ;
-   width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        position: fixed;
+        right:0px ;
+        bottom: 0px ;
+        left: 0px ;
+        width: 100%;
+        line-height: 50px;
+        background: #FFFFFF;
+        border-top: 1px solid #ECECEC;
+		box-shadow: 0px -1px 3px #ECECEC;
 	}
 	/* .carContent {
 		position: fixed;
@@ -120,4 +130,10 @@ p {
 		width: 100%;
 		overflow: auto;
 	} */
+	.van-col{
+		text-align: center;
+	}
+	.van-button{
+		width: 100%;
+	}
 </style>

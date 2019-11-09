@@ -11,7 +11,7 @@
 		</div>
 		<div class="nav">
 		<div class="leftimg">
-			<img class="img" src="../../assets/Home/今日进程.png" alt="">
+			<img class="img" src="../../assets/Home/artisanborrad.png" alt="">
 		</div>
 		<div class="rightwords">
 			<p class="right">
@@ -161,7 +161,7 @@ export default {
 		border-radius: 20px;
 		border: 0;
 		margin-top: 20px;
-		color: #999999;
+		color: #333333;
 		background-color:#EBEBEB;
 		font-size: 13px;
 	}
@@ -181,5 +181,9 @@ export default {
 	}
 	.van-collapse-item__wrapper{
 		text-align: center;
+	}
+	.van-cell__title span{
+		color: #333333;
+		font-weight: bold;
 	}
 </style>

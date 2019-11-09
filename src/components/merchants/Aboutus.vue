@@ -11,7 +11,7 @@
 		</div>
 		<div class="nav">
 		<div class="leftimg">
-			<img class="img" src="../../assets/Home/今日进程.png" alt="">
+			<img class="img" src="../../assets/Home/artisanborrad.png" alt="">
 		</div>
 		<div class="rightwords">
 			<p class="right">
