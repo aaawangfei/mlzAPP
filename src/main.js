@@ -7,6 +7,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueLazyload from 'vue-lazyload'
 import 'swiper/dist/css/swiper.css'
 import { Image } from 'vant';
+
 import {
 	Button,
 	Carousel,

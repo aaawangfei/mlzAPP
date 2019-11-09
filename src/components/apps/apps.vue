@@ -2,10 +2,10 @@
 	<div>
 	<div class="nav">
 		<span class="leftnav">
-			<van-search shape="round" placeholder="采煤机配件降价" v-model="value" />
+			<van-search @click="search" shape="round" placeholder="采煤机配件降价" v-model="value" />
 		</span>
 		<span class="rightnav">
-			<van-icon name="chat-o" info="2" />
+			<van-icon @click="information" name="chat-o" info="2" />
 			</span>
 	</div>
 	<van-tree-select height="auto" :items="items" :main-active-index.sync="activeIndex">
@@ -111,20 +111,30 @@ export default {
 			value:'',
 			activeIndex: 0,
       items: [
-				       { text: '推荐分类' },
-			         { text: '合作商家' },
-							 { text: '矿用配件' },
-							 { text: '大型部件' },
-							 { text: '矿用设备' },
-							 { text: '矿用材料' },
-							 { text: '工业品MRO' },
-							]
+			  { text: '推荐分类' },
+			  { text: '合作商家' },
+			  { text: '矿用配件' },
+			  { text: '大型部件' },
+			  { text: '矿用设备' },
+			  { text: '矿用材料' },
+			  { text: '工业品MRO' },
+			 ]
     }
+  },
+  methods: {
+  	search() {
+  	  this.$router.push({
+  		    path: '/search'
+  	 })
+  	},
+	information() {
+	  this.$router.push({
+		    path: '/information'
+	 })
+	}
   }
 }
 </script>
-
-
 <style scoped>
 	.nav{
 		overflow: hidden;
@@ -143,7 +153,7 @@ export default {
 	.rightnav{
 		float: right;
 		margin-right: 10px;
-		margin-top: 20px;
+		margin-top: 25px;
 		width: 10%;
 	}
 	.imgsize{
@@ -155,5 +165,8 @@ export default {
 		text-align: left;
 		margin-top: 11px;
 		margin-left: 10px;
+	}
+	.van-search{
+		padding: 15px 6px;
 	}
 </style>
