@@ -11,7 +11,7 @@
 		</div>
 		<div class="nav">
 		<div class="leftimg">
-			<img class="img" src="../../assets/Home/今日进程.png" alt="">
+			<img class="img" src="../../assets/Home/artisanborrad.png" alt="">
 		</div>
 		<div class="rightwords">
 			<p class="right">
@@ -55,7 +55,7 @@
   <van-cell v-for="item in list" :key="item" :title="item"/>
 	      <div class="nav bor-bottom">
 	      <div class="leftimg">
-	      	<img class="img" src="../../assets/Home/今日进程.png" alt="">
+	      	<img class="img" src="../../assets/Home/dxb.png" alt="">
 	      </div>
 	      <div class="rightwords">
 	      	<p class="right">
@@ -167,6 +167,7 @@ export default {
 	.right{
 		margin-top: 18px;
 		text-align: left;
+		margin-right: 16px;
 	}
 	.tit{
 		float: left;
@@ -176,6 +177,9 @@ export default {
 		width: 100%;
         text-align: left;
 		margin-top: 6px;
+		white-space: nowrap;  
+		text-overflow:ellipsis; 
+		overflow:hidden;
 	}
 	.time{
 		float: left;
@@ -189,12 +193,11 @@ export default {
 		float: right;
 		margin-right: 16px;
 		font-size: 13px;
-		margin-top: -7px;
+		margin-top: -9px;
 	}
 	.gz{
 		color: #E33B3E;
 		border-radius: 20px;
-		line-height: 22px;
 	}
 	.col-xs-5ths{ 
 		width:20%; 

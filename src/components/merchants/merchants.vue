@@ -11,7 +11,7 @@
 		</div>
 		<div class="nav">
 		<div class="leftimg">
-			<img class="img" src="../../assets/Home/今日进程.png" alt="">
+			<img class="img" src="../../assets/Home/artisanborrad.png" alt="">
 		</div>
 		<div class="rightwords">
 			<p class="right">
@@ -57,15 +57,15 @@
 	    <van-cell v-for="item in list" :key="item" :title="item"/>
 	  	      <div class="nav bor-bottom">
 	  	      <div class="leftimg">
-	  	      	<img class="img" src="../../assets/Home/今日进程.png" alt="">
+	  	      	<img class="img" src="../../assets/Home/dxb.png" alt="">
 	  	      </div>
 	  	      <div class="rightwords">
 	  	      	<p class="right">
 	  	      		<span class="tit titlist">采煤机配件导向靶CON02</span>
-	  	      		<span class="time timelist">￥3473</span>
 	  	      		</p>
-	  	      	<p class="Introduction icontop">
-	  	      		<van-icon color="#E33B3E" name="shopping-cart-o" />
+	  	      	<p>
+	  	      				<span class="time timelist">￥3473</span>
+	  	      		<van-icon class="Introduction icontop" color="#E33B3E" name="shopping-cart-o" />
 	  	      		</p>
 	  	      </div>
 	  	      </div>
@@ -178,7 +178,8 @@ export default {
 	}
 	.right{
 		margin-top: 18px;
-		float: left;
+		text-align: left;
+		margin-right: 16px;
 	}
 	.tit{
 		float: left;
@@ -188,13 +189,15 @@ export default {
 		width: 100%;
         text-align: left;
 		margin-top: 6px;
+		white-space: nowrap;  
+		text-overflow:ellipsis; 
+		overflow:hidden;
 	}
 	.time{
 		float: left;
 	    margin-left: 10px;
 	    color: #FFFFFF;
 		font-size: 10px;
-		width: 100%;
         text-align: left;
 		margin-top: 10px;
 	}
@@ -202,7 +205,7 @@ export default {
 		float: right;
 		margin-right: 16px;
 		font-size: 13px;
-		margin-top: 35px;
+		margin-top: -9px;
 	}
 	.gz{
 		color: #E33B3E;
@@ -222,7 +225,7 @@ export default {
 		color: #E33B3E;
 	}
 	.icontop{
-		margin-top: 57px;
+		margin-top: 10px;
 	}
 	.bor-bottom{
 		border-bottom: 1px solid #F2F2F2;

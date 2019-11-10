@@ -17,9 +17,9 @@ export const homeRouter=[
     	  component: () => import('@/components/cart/cart'),
     	},
     	{
-    	  path: '/contact',
-    	  name: 'contact',
-    	  component: () => import('@/components/contact/contact'),
+    	  path: '/mineIndex',
+    	  name: 'mineIndex',
+    	  component: () => import('@/components/mine/mineIndex'),
     	},
     	{
     	  path: '/apps',

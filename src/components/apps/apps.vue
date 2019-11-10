@@ -14,56 +14,44 @@
 			<p class="appstit">采掘设备配件</p>
 			<van-grid :column-num="3" :border="false">
 						<van-grid-item to="/windCar">
-							<img class="imgsize" src="../../assets/Home/申请搭车.png">
-							<div class="small-size">配件区</div>
+							<img class="imgsize" src="../../assets/Home/njz.png">
+							<div class="small-size">采煤机配件</div>
 						</van-grid-item>
 						<van-grid-item to="/tadayprogress">
-							<img class="imgsize" src="../../assets/Home/car_home.png">
-							<div class="small-size">耗材区</div>
+							<img class="imgsize" src="../../assets/Home/cglz.png">
+							<div class="small-size">掘进机配件</div>
 						</van-grid-item>
 						<van-grid-item to="/garageindex">
-							<img class="imgsize" src="../../assets/Home/car_home.png">
-							<div class="small-size">设备区</div>
+							<img class="imgsize" src="../../assets/Home/cl.png">
+							<div class="small-size">连载机配件</div>
 						</van-grid-item>
 						<van-grid-item to="/myTravil">
-							<img class="imgsize" src="../../assets/Home/我的行程.png">
-							<div class="small-size">二手区</div>
+							<img class="imgsize" src="../../assets/Home/njz.png">
+							<div class="small-size">采煤机配件</div>
 						</van-grid-item>
 			      <van-grid-item to="/garageindex">
-			      	<img class="imgsize" src="../../assets/Home/car_home.png">
-			      	<div class="small-size">设备区</div>
+			      	<img class="imgsize" src="../../assets/Home/cglz.png">
+			      	<div class="small-size">掘瞄机配件</div>
 			      </van-grid-item>
 			      <van-grid-item to="/myTravil">
-			      	<img class="imgsize" src="../../assets/Home/我的行程.png">
+			      	<img class="imgsize" src="../../assets/Home/cl.png">
 			      	<div class="small-size">二手区</div>
 			      </van-grid-item>
 					</van-grid>
 						<p class="appstit">运输设备配件</p>
 					<van-grid :column-num="3" :border="false">
 								<van-grid-item to="/windCar">
-									<img class="imgsize" src="../../assets/Home/申请搭车.png">
-									<div class="small-size">配件区</div>
+									<img class="imgsize" src="../../assets/Home/njz.png">
+									<div class="small-size">采煤机配件</div>
 								</van-grid-item>
 								<van-grid-item to="/tadayprogress">
-									<img class="imgsize" src="../../assets/Home/car_home.png">
-									<div class="small-size">耗材区</div>
+									<img class="imgsize" src="../../assets/Home/cglz.png">
+									<div class="small-size">掘进机配件</div>
 								</van-grid-item>
 								<van-grid-item to="/garageindex">
-									<img class="imgsize" src="../../assets/Home/car_home.png">
-									<div class="small-size">设备区</div>
+									<img class="imgsize" src="../../assets/Home/cl.png">
+									<div class="small-size">连载机配件</div>
 								</van-grid-item>
-								<van-grid-item to="/myTravil">
-									<img class="imgsize" src="../../assets/Home/我的行程.png">
-									<div class="small-size">二手区</div>
-								</van-grid-item>
-					      <van-grid-item to="/garageindex">
-					      	<img class="imgsize" src="../../assets/Home/car_home.png">
-					      	<div class="small-size">设备区</div>
-					      </van-grid-item>
-					      <van-grid-item to="/myTravil">
-					      	<img class="imgsize" src="../../assets/Home/我的行程.png">
-					      	<div class="small-size">二手区</div>
-					      </van-grid-item>
 							</van-grid>
 		</div>
       
@@ -157,16 +145,22 @@ export default {
 		width: 10%;
 	}
 	.imgsize{
-		width: 40px;
-		height: 40px; 
-		margin-bottom: 3px;
+		width: 60px;
+		height: 60px; 
+		margin-bottom: 6px;
 	}
 	.appstit{
 		text-align: left;
 		margin-top: 11px;
 		margin-left: 10px;
+		color: #333333;
+		font-weight: 450;
+		margin-bottom: 0px;
 	}
 	.van-search{
 		padding: 15px 6px;
+	}
+	.small-size{
+		color: #666666;
 	}
 </style>

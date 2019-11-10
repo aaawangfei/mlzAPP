@@ -17,19 +17,19 @@
 			 <div class="hot-rent-item">
 			 <div class="nav">
 				 <span class="logtit">煤亮子商城</span>
-			 		<div class="leftimg">
-			 			<img class="img" src="../assets/Home/今日进程.png" alt="">
-			 		</div>
-			 		<div class="rightwords">
-			 			<p class="right">
-			 				<span class="titt">采煤机配件导向靶CON02</span>
-			 				<span class="time">￥3473</span>
-			 				</p>
-			 			<p class="Introduction">
-			 				<van-stepper v-model="value" min="1" max="8" />
-			 				</p>
-			 		</div>
-			 		</div>
+					<div class="leftimg">
+						<img class="img" src="../assets/Home/dxb.png" alt="">
+					</div>
+					<div class="rightwords">
+						<p class="right">
+							<span class="tit titlist">采煤机配件导向靶CON02</span>
+							</p>
+						<p>
+									<span class="time timelist">￥3473</span>
+							<van-stepper class="Introduction icontop" v-model="value" min="1" max="8" />
+							</p>
+					</div>
+					</div>
 					</div>
 			 <div class="hot-rent-item" style="padding:12px 0 20px 0;">
 				<div class="qrdd">
@@ -247,22 +247,22 @@ export default {
 	}
 	.leftimg{
 		float: left;
-		width: 20%;
+		width: 30%;
 	}
 	.img{
-		width: 40px;
+		width: 80px;
 		display: block;
-		margin: 27px auto;
+		margin: 6px auto;
 		text-align: center;
 	}
 	.rightwords{
 		float: right;
-		width: 80%;
+		width: 70%;
 	}
 	.right{
 		margin-top: 18px;
-		float: left;
-		margin-right: -60px;
+		text-align: left;
+		margin-bottom: -16px;
 	}
 	.titt{
 		float: left;
@@ -278,7 +278,6 @@ export default {
 		float: left;
 	    margin-left: 10px;
 		font-size: 15px;
-		width: 100%;
 	    text-align: left;
 		margin-top: 10px;
 		color: #E33B3E;
@@ -286,7 +285,7 @@ export default {
 	.Introduction{
 		float: right;
 		margin-right: 13px;
-		margin-top: 48px;
+		margin-top: 2px;
 	}
 	.imgsize{
 		width: 40px;

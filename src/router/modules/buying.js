@@ -16,6 +16,7 @@ export default [
 	  component: () => import('@/components/orders/rent')
 	},
 	{
+
 	  path: '/applyRefund',
 	  name: 'applyRefund',
 	  component: () => import('@/components/mine/refund/applyRefund')
@@ -25,5 +26,11 @@ export default [
 	  name: 'logistics',
 	  component: () => import('@/components/mine/refund/logistics')
 	},
-	
+	{
+
+	  path: '/applybuy',
+	  name: 'applybuy',
+	  component: () => import('@/components/orders/buy')
+	}
+
 ]
