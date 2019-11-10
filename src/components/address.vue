@@ -41,10 +41,20 @@ export default {
 		onClickLeft() {
       Toast('返回');
     },
-    onClickRight() {
-      Toast('按钮');
-    }
+	onClickRight() {
+	  this.$dialog.alert({
+         title: "确定要删除么", //加上标题
+         message: "", //改变弹出框的内容
+         showCancelButton: true //展示取水按钮
+    })
+    .then(() => { //点击确认按钮后的调用
+         console.log("点击了确认按钮噢")
+    })
+    .catch(() => { //点击取消按钮后的调用
+         console.log("点击了取消按钮噢")
+    })
   }
+ }
 }
 </script>
 <style scoped>
