@@ -22,56 +22,97 @@
         <van-row class="taxtcolor">
           <van-col span="8">
             <div>
-              <p>123</p>
+              <p>4</p>
               <p>产品收藏</p>
             </div>
           </van-col>
           <van-col span="8">
             <div>
-              <p>4</p>
+              <p>12</p>
               <p>关注品牌</p>
             </div>
           </van-col>
           <van-col span="8">
             <div>
-              <p>4</p>
+              <p>8</p>
               <p>浏览记录</p>
             </div>
           </van-col>
         </van-row>
       </div>
     </div>
-    <div style="background: white;border-radius:5px;padding-top: 2px;">
-      <van-grid column-num="4" :border="false" gutter="3" square="false">
-        <van-grid-item icon="photo-o" text="代付款" />
-        <van-grid-item icon="photo-o" text="待发货" />
-        <van-grid-item icon="photo-o" text="待收货" />
-        <van-grid-item icon="photo-o" text="退款/售后" />
-      </van-grid>
+    <div style="background: white;border-radius:5px;padding-top: 2px;margin-top: 10px;">
+			<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="合作商家" is-link value="查看更多" />
+			<span style="background: #f2f2f2;width: 100%;height: 1px; display: block; "></span>
+			<van-grid :border="false" :column-num="4" :square="false">
+  <van-grid-item>
+    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+		<span>代付款</span>
+  </van-grid-item>
+  <van-grid-item>
+    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+		<span>待发货</span>
+  </van-grid-item>
+  <van-grid-item>
+    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+		<span>待收货</span>
+  </van-grid-item>
+	<van-grid-item>
+	  <img class="imgsize" src="../../assets/Home/Accessories.png" />
+		<span>退款/售后</span>
+	</van-grid-item>
+</van-grid>
     </div>
     <div style="border-radius:5px; padding-top: 2px;padding: 10px 0;">
       <img class="ellipse" src="../../assets/Home/banner.png" />
     </div>
-    <div style="background: white;border-radius:5px; padding-top: 2px;margin-bottom: 20px;">
-      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;">我的应用</p>
+    <div style="background: white;border-radius:5px; padding-top: 2px;margin-bottom: 10px;">
+      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;color: #333333;font-weight: 500;">我的应用</p>
       <span style="background: #f2f2f2;width: 100%;height: 1px; display: block; "></span>
-      <van-grid column-num="4" :border="false" gutter="3" square="false">
-        <van-grid-item icon="photo-o" text="合同管理" />
-        <van-grid-item icon="photo-o" text="需求发布" />
-        <van-grid-item icon="photo-o" text="采购单" />
-      </van-grid>
+			<van-grid :border="false" :column-num="4" :square="false">
+			  <van-grid-item>
+			    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">合同管理</span>
+			  </van-grid-item>
+			  <van-grid-item>
+			    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">需求发布</span>
+			  </van-grid-item>
+			  <van-grid-item>
+			    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">采购单</span>
+			  </van-grid-item>
+			</van-grid>
     </div>
     <div style="background: white;border-radius:5px; padding-top: 2px;">
-      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;">服务应用</p>
+      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;color: #333333;font-weight: 500;">服务应用</p>
       <span style="background: #f2f2f2;width: 100%;height: 1px; display: block; "></span>
-      <van-grid column-num="4" :border="false" gutter="3" square="false">
-        <van-grid-item icon="photo-o" text="库存项目" />
-        <van-grid-item icon="photo-o" text="代理销售" />
-        <van-grid-item icon="photo-o" text="预付款项目" />
-        <van-grid-item icon="photo-o" text="提货单查询" />
-        <van-grid-item icon="photo-o" text="收款单查询" />
-        <van-grid-item icon="photo-o" text="盈利测算" />
-      </van-grid>
+			<van-grid :border="false" :column-num="4" :square="false">
+			  <van-grid-item>
+			    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">库存项目</span>
+			  </van-grid-item>
+			  <van-grid-item>
+			    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">代理销售</span>
+			  </van-grid-item>
+			  <van-grid-item>
+			    <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">预付款项目</span>
+			  </van-grid-item>
+				<van-grid-item>
+				  <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">提货单查询</span>
+				</van-grid-item>
+			<van-grid-item>
+				  <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">收款单查询</span>
+				</van-grid-item>
+			<van-grid-item>
+				  <img class="imgsize" src="../../assets/Home/Accessories.png" />
+					<span class="wordcolor">盈利测算</span>
+				</van-grid-item>
+			</van-grid>
     </div>
 	<van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
 	  <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
@@ -132,5 +173,32 @@
     line-height: 10px;
     font-size: 8px;
     top: 2px;
+}
+.imgsize{
+	width: 40px;
+	margin-bottom: 6px;
+}
+.van-grid-item span{
+	font-size: 10px;
+	color: #333333;
+}
+.wordcolor{
+	font-size: 10px;
+	color: #656565!important;
+}
+.van-cell__title{
+	text-align: left;
+}
+.van-cell{
+	padding: 10px 13px 10px 16px;
+}
+.van-cell__value span{
+	color: #333333;
+	font-size: 10px;
+}
+.van-cell__title span{
+	font-size: 16px;
+	color: #333333;
+	font-weight: 500;
 }
 </style>

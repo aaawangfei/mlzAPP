@@ -357,7 +357,10 @@ export default {
 		font-size: 13px;
 		color: #333333;
 		display: block;
-		text-align: justify; 
+		text-align: left;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; 
 	}
 	.hzsjrow{
 		background: #FFFFFF!important;
