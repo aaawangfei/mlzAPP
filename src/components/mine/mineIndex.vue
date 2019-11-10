@@ -42,7 +42,7 @@
       </div>
     </div>
     <div style="background: white;border-radius:5px;padding-top: 2px;margin-top: 10px;">
-			<p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;">我的订单</p>
+			<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="我的订单" is-link value="查看更多" />
 			<span style="background: #f2f2f2;width: 100%;height: 1px; display: block; "></span>
 			<van-grid :border="false" :column-num="4" :square="false">
   <van-grid-item>
@@ -67,7 +67,7 @@
       <img class="ellipse" src="../../assets/Home/banner.png" />
     </div>
     <div style="background: white;border-radius:5px; padding-top: 2px;margin-bottom: 10px;">
-      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;">我的应用</p>
+      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;font-weight: 500;color: #333333;font-size: 16px;">我的应用</p>
       <span style="background: #f2f2f2;width: 100%;height: 1px; display: block; "></span>
 			<van-grid :border="false" :column-num="4" :square="false">
 			  <van-grid-item>
@@ -85,7 +85,7 @@
 			</van-grid>
     </div>
     <div style="background: white;border-radius:5px; padding-top: 2px;">
-      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;">服务应用</p>
+      <p style="text-align: left; height: 20px;padding-left: 16px;line-height: 20px;font-weight: 500;color: #333333;font-size: 16px;">服务应用</p>
       <span style="background: #f2f2f2;width: 100%;height: 1px; display: block; "></span>
 			<van-grid :border="false" :column-num="4" :square="false">
 			  <van-grid-item>
@@ -185,5 +185,23 @@
 .wordcolor{
 	font-size: 10px;
 	color: #656565!important;
+}
+.van-cell__title span{
+	font-size: 16px;
+	font-weight: 500;
+	color: #333333;
+}
+.van-cell__title{
+	text-align: left;
+}
+.van-cell{
+	padding: 12px 13px 12px 16px;
+}
+.van-cell__value span{
+	font-size: 10px;
+	color: #333333;
+}
+.van-icon{
+	color: #333333;
 }
 </style>
