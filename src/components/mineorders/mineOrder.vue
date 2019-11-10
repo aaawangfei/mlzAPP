@@ -5,14 +5,58 @@
     </div>
 
     <van-tabs v-model="active" :swipe-threshold="5" :border="false">
-      <van-tab title="全部">全部</van-tab>
-      <van-tab title="待付款">
+      <van-tab title="全部">
         <van-list v-model="loading" :finished="finished" @load="onLoad">
           <van-cell v-for="item in goods" :key="item.id" :name="item.id">
             <div style=" padding: 10px;">
+              <!-- <div style="display: flex;justify-content:space-between">
+                <span> 煤亮子商城</span>
+                <span style="color: #E33B3E;"> 等待付款</span>
+              </div> -->
+              <div style="display: flex; border-radius: 5px; margin-top: 10px;">
+
+                <div style="margin-top: 10px;">
+                  <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                </div>
+
+
+                <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;">
+                  <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
+
+                  <div style="display: flex;justify-content: space-between;">
+                    <span>￥3400</span>
+                    <span>X1</span>
+
+                  </div>
+
+
+
+
+                </div>
+              </div>
+              <div style="display: flex;justify-content:flex-end">
+                <van-button class="Attribute" round hairline type="info" color="#666666" plain size="mini">申请退款</van-button>
+
+                <van-button class="Attribute" round hairline type="info" color="#E33B3E" plain size="mini">提醒发货</van-button>
+
+
+
+
+
+              </div>
+            </div>
+
+          </van-cell>
+
+        </van-list>
+      </van-tab>
+      <van-tab title="待付款">
+        <van-list v-model="loading" :finished="finished" @load="onLoad">
+          <van-cell v-for="item in goods" :key="item.id" :name="item.id" @click="checkpayment()">
+            <div style=" padding: 10px;">
               <div style="display: flex;justify-content:space-between">
                 <span> 煤亮子商城</span>
-                <span> 等待付款</span>
+                <span style="color: #E33B3E;"> 等待付款</span>
               </div>
               <div style="display: flex; border-radius: 5px; margin-top: 10px;">
 
@@ -31,7 +75,9 @@
               </div>
               <div style="display: flex;justify-content:flex-end">
 
-                <span> 去支付</span>
+                <van-button class="Attribute" round hairline type="info" color="#E33B3E" plain size="mini">去支付</van-button>
+
+
               </div>
             </div>
 
@@ -41,14 +87,59 @@
 
 
       </van-tab>
-      <van-tab title="待收货">待收货</van-tab>
+
+      <van-tab title="待发货">
+        <van-list v-model="loading" :finished="finished" @load="onLoad">
+          <van-cell v-for="item in goods" :key="item.id" :name="item.id" @click="shippingDetails()">
+            <div style=" padding: 10px;">
+              <div style="display: flex;justify-content:space-between">
+                <span> 煤亮子商城</span>
+                <span style="color: #E33B3E;"> 等待付款</span>
+              </div>
+              <div style="display: flex; border-radius: 5px; margin-top: 10px;">
+
+                <div style="margin-top: 10px;">
+                  <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                </div>
+
+
+                <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;">
+                  <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
+
+                  <div style="display: flex;justify-content: space-between;">
+                    <span>￥3400</span>
+                    <span>X1</span>
+
+                  </div>
+
+
+
+
+                </div>
+              </div>
+              <div style="display: flex;justify-content:flex-end">
+                <van-button class="Attribute" round hairline type="info" color="#666666" plain size="mini">申请退款</van-button>
+
+                <van-button class="Attribute" round hairline type="info" color="#E33B3E" plain size="mini">提醒发货</van-button>
+
+
+
+
+
+              </div>
+            </div>
+
+          </van-cell>
+
+        </van-list>
+      </van-tab>
       <van-tab title="待收货">
         <van-list v-model="loading" :finished="finished" @load="onLoad">
           <van-cell v-for="item in goods" :key="item.id" :name="item.id">
             <div style=" padding: 10px;">
               <div style="display: flex;justify-content:space-between">
                 <span> 煤亮子商城</span>
-                <span> 等待付款</span>
+                <span style="color: #E33B3E;"> 等待收货</span>
               </div>
               <div style="display: flex; border-radius: 5px; margin-top: 10px;">
 
@@ -60,27 +151,41 @@
                 <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;">
                   <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
 
-                  <p>￥3400</p>
+                  <div style="display: flex;justify-content: space-between;">
+                    <span>￥3400</span>
+
+
+                  </div>
+
+
 
 
                 </div>
               </div>
               <div style="display: flex;justify-content:flex-end">
 
-                <span> 去支付</span>
+
+                <van-button class="Attribute" round hairline type="info" color="#E33B3E" plain size="mini">查看物流</van-button>
+
+
+
+
+
               </div>
             </div>
 
           </van-cell>
 
         </van-list>
+
       </van-tab>
-      <van-tab title="售后/退款"><van-list v-model="loading" :finished="finished" @load="onLoad">
+      <van-tab title="已完成">
+        <van-list v-model="loading" :finished="finished" @load="onLoad">
           <van-cell v-for="item in goods" :key="item.id" :name="item.id">
             <div style=" padding: 10px;">
               <div style="display: flex;justify-content:space-between">
                 <span> 煤亮子商城</span>
-                <span> 等待付款</span>
+                <span style="color: #E33B3E;"> 已完成</span>
               </div>
               <div style="display: flex; border-radius: 5px; margin-top: 10px;">
 
@@ -92,28 +197,58 @@
                 <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;">
                   <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
 
-                  <p>￥3400</p>
+                  <div style="display: flex;justify-content: space-between;">
+                    <span>￥3400</span>
+
+
+                  </div>
+
+
 
 
                 </div>
               </div>
-              
+              <div style="display: flex;justify-content:flex-end">
+
+
+                <van-button class="Attribute" round hairline type="info" color="#E33B3E" plain size="mini">再次购买</van-button>
+
+
+
+
+
+              </div>
             </div>
 
           </van-cell>
 
         </van-list>
 
-</van-tab>
+      </van-tab>
     </van-tabs>
   </div>
 </template>
 
 <script>
+  import Vue from 'vue';
+  import {
+    List
+  } from 'vant';
+  import {
+    PullRefresh
+  } from 'vant';
+
+  Vue.use(PullRefresh);
+
+  Vue.use(List);
   export default {
+
     data() {
       return {
-        active: 2,
+        active: this.$route.query.active,
+        loading: false,
+        finished: true,
+        onLoad: false,
         goods: [{
             id: '1',
             title: '进口香蕉',
@@ -154,11 +289,33 @@
 
 
       };
+
     },
     methods: {
+
       onClickLeft() {
+        console.log(this.active);
         this.$router.go(-1);
       },
+      checkpayment() {
+        this.$router.push({
+
+            path: "/paymentDetails",
+
+          }
+
+        );
+      },
+      shippingDetails(){
+        this.$router.push({
+        
+            path: "/shippingDetails",
+        
+          }
+        
+        );
+      }
+
 
     }
   }
@@ -186,5 +343,12 @@
     text-align: left;
     border-radius: 5px;
     background-color: #FFFFFF;
+  }
+
+  .Attribute {
+    padding-right: 10px;
+    padding-left: 10px;
+
+
   }
 </style>

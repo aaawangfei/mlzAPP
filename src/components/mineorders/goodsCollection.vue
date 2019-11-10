@@ -3,84 +3,78 @@
   <div >
 
     <div>
-      <van-nav-bar title="商品收藏" :right-text="titile" @click-right="onClickRight" :border="false" left-arrow @click-left="onClickLeft"/>
+      <van-nav-bar title="商品收藏" :right-text="titile" @click-right="onClickRight" :border="false" left-arrow @click-left="onClickLeft" />
+    </div>
+    <div v-if="show">
+      <van-list v-model="loading" :finished="finished" @load="onLoad">
+        <van-cell v-for="item in goods" :key="item.id" :name="item.id">
+          <div style=" padding: 10px;">
+            <div style="display: flex; border-radius: 5px;">
+              <div>
+
+                <div>
+                  <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                </div>
+
+              </div>
+              <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px; width: 100%;">
+                <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
+                <div style="display: flex;justify-content: space-between;">
+                  <span>￥3400</span>
+                  <div>
+
+                    <van-icon name="shopping-cart-o" />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </van-cell>
+
+      </van-list>
+
     </div>
 
-    <div class="allfix">
-      <div>
-        <van-list v-model="loading" :finished="finished" @load="onLoad">
-          <van-cell v-if="show" v-for="item in goods" :key="item.id" :name="item.id">
-            <div style=" padding: 10px;">
-              <div style="display: flex; border-radius: 5px;">
-                <div>
 
-                    <div>
-                      <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-                    </div>
-                  </van-checkbox>
-                </div>
-                <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;">
-                  <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
-                  <div style="display: flex;justify-content: space-between;">
-                    <p>￥3400</p>
-                    <p>
+    <div  v-if="!show" style="margin-bottom: 50px;">
+      <van-list v-model="loading" :finished="finished" @load="onLoad">
 
-                      <van-icon name="shopping-cart-o" />
-                    </p>
+        <van-cell  v-for="item in goods" :key="item.id" :name="item.id">
+          <div style=" padding: 10px;">
+            <div style="display: flex; border-radius: 5px;">
+              <div>
+                <van-checkbox name="item" v-model="item.checked">
+                  <div>
+                    <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                  </div>
+                </van-checkbox>
+              </div>
+              <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;width: 80%;">
+                <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
+                <div style="display: flex;justify-content: space-between;">
+                  <span>￥3400</span>
+                  <div>
 
+                    <van-icon name="shopping-cart-o" />
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-          </van-cell>
-          <van-cell v-else v-for="item in goods" :key="item.id" :name="item.id">
-            <div style=" padding: 10px;">
-              <div style="display: flex; border-radius: 5px;">
-                <div>
-                  <van-checkbox name="item" v-model="item.checked">
-                    <div>
-                      <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-                    </div>
-                  </van-checkbox>
-                </div>
-                <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;">
-                  <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
-                  <div style="display: flex;justify-content: space-between;">
-                    <p>￥3400</p>
-                    <p>
+        </van-cell>
 
-                      <van-icon name="shopping-cart-o" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </van-list>
+      <div v-if="!show" class="van-submit-bar">
 
-          </van-cell>
+        <van-checkbox v-model="checked">全选</van-checkbox>
 
-        </van-list>
+        <span style="text-align: -moz-center; width: 40%;"></span>
+        <span style="text-align: -moz-center;width: 40%"> 删除</span>
       </div>
-
-
-
-        <div v-if="!show" class="van-submit-bar">
-
-          <van-checkbox v-model="checked">全选</van-checkbox>
-
-          <span style="text-align: -moz-center; width: 40%;"></span>
-          <span style="text-align: -moz-center;width: 40%"> 删除</span>
-        </div>
-
-
-
-
     </div>
-
-
-
-
-
 
   </div>
 
@@ -183,10 +177,10 @@
 
       onClickRight() {
         if (this.show) {
-          this.titile="完成";
+          this.titile = "完成";
           this.show = false;
         } else {
-          this.titile="编辑";
+          this.titile = "编辑";
           this.show = true;
         }
 
@@ -197,6 +191,9 @@
       },
       toggleAll() {
         this.$refs.checkboxGroup.toggleAll();
+      },
+      onClickLeft() {
+        this.$router.go(-1);
       },
 
 
@@ -231,14 +228,7 @@
 </script>
 
 
-<style lang="less" scoped>
-  p {
-    margin: 0px 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
+<style scoped>
   .cell-text {
     margin: 0px 0px 0px 0px;
     text-align: left;
@@ -287,9 +277,7 @@
 
   }
 
-  div {
-    text-align: center
-  }
+
 
   .van-submit-bar {
     padding-left: 20px;
