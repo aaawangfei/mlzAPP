@@ -1,29 +1,26 @@
 <template>
-  <div style="background: #F2F2F2 !important;padding-bottom: 100%;">
+  <div style="background: #F2F2F2 ;height:100%;
+        position:fixed; width: 100%;">
     <div>
-      <van-nav-bar title="账户设置" left-arrow @click-left="onClickLeft" />
+      <van-nav-bar title="账户安全" left-arrow @click-left="onClickLeft" />
     </div>
-    <div style="background: white; border-bottom-right-radius: 5px; border-bottom-left-radius:5px;overflow: hidden;">
+   <div style="background: white; border-bottom-right-radius: 5px; border-bottom-left-radius:5px;overflow: hidden;">
 
       <div style="background: white; border-radius:5px; overflow: hidden;">
 
         <div style="background: #f2f2f2; height: 1px;" />
         <div style="overflow: hidden;line-height: 50px;">
-          <span style="float: left;color: #333333;vertical-align: middle; margin-left: 10px;">修改登录密码</span>
-          <span style="float: right; color: #333333;line-height: 50px;">
-            <van-icon name="arrow" />
-          </span>
+           <van-coupon-cell title="修改登录密码" value="" />
+
         </div>
         <div style="background: #f2f2f2; height: 1px;" />
         <div style="overflow: hidden;line-height: 50px;">
-          <span style="float: left;color: #333333;vertical-align: middle; margin-left: 10px;">修改手机号码</span>
-          <span style="float: right; color: #333333;line-height: 50px;">
-            15630667659<van-icon style="vertical-align:middle" name="arrow" />
-          </span>
+          <van-coupon-cell title="修改手机号码" value="15630667659" />
+
         </div>
       </div>
     </div>
-  </div>
+ </div>
 </template>
 <script scoped>
   export default {

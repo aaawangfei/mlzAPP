@@ -6,7 +6,7 @@
         <van-nav-bar title="购物车" right-text="编辑" @click-right="onClickRight" :border="false" />
       </div>
 
-      <div>
+      <div style="margin-bottom: 100px;">
 
         <van-list v-model="loading" :finished="finished" @load="onLoad">
           <van-cell v-for="item in goods" :key="item.id" :name="item.id">
@@ -22,8 +22,8 @@
                 <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;">
                   <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
                   <div style="display: flex;justify-content: flex-star;">
-                    <p>￥3400</p>
-                    <van-stepper style="margin-left: 20%;" v-model="item.num" />
+                    <span>￥3400</span>
+                    <van-stepper style="margin-left: 10%;" v-model="item.num" />
                   </div>
                 </div>
               </div>
@@ -221,12 +221,7 @@
 
 
 <style lang="less" scoped>
-  p {
-    margin: 0px 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+
 
   .cell-text {
     margin: 0px 0px 0px 0px;
@@ -282,7 +277,7 @@
     // font-size: 14px;
     // left: 0px;
     // right: 0px;
-    // bottom: 50px;
+     //bottom: 50px;
   }
 
   div {
@@ -296,7 +291,7 @@
 
     line-height: 50px;
     display: flex;
-    bottom: 55px !important;
+    bottom: 50px !important;
   }
 
 

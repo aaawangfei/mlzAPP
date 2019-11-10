@@ -59,7 +59,7 @@
 			            <van-col span="6">
 			            	<img class="imgsize" src="../assets/Home/申请搭车.png">
 			            	<div class="small-size">西安重装</div>
-			            </van-col> 
+			            </van-col>
 					</van-row>
 					</div>
 					<div class="hzsj">
@@ -94,7 +94,7 @@
 				 <div class="navv navtop">
 				 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
 				 </div>
-		
+
 	</li>
     <li class="hot-rent-item" @click="goodsdetail">
     	         <img src="../assets/Home/今日进程.png" alt="">
@@ -103,7 +103,7 @@
     			 <div class="navv navtop">
     			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
     			 </div>
-    	
+
     </li>
     <li class="hot-rent-item" @click="goodsdetail">
     	         <img src="../assets/Home/今日进程.png" alt="">
@@ -112,7 +112,7 @@
     			 <div class="navv navtop">
     			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
     			 </div>
-    	
+
     </li>
     <li class="hot-rent-item" @click="goodsdetail">
     	         <img src="../assets/Home/今日进程.png" alt="">
@@ -121,7 +121,7 @@
     			 <div class="navv navtop">
     			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
     			 </div>
-    	
+
     </li>
   </ul>
 	</van-tab>
@@ -136,7 +136,7 @@
 		  			 <div class="navv navtop">
 		  			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
 		  			 </div>
-		  	
+
 		  </li>
 		  <li class="hot-rent-item" @click="goodsdetail">
 		  	         <img src="../assets/Home/今日进程.png" alt="">
@@ -145,7 +145,7 @@
 		  			 <div class="navv navtop">
 		  			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
 		  			 </div>
-		  	
+
 		  </li>
 		  <li class="hot-rent-item" @click="goodsdetail">
 		  	         <img src="../assets/Home/今日进程.png" alt="">
@@ -154,7 +154,7 @@
 		  			 <div class="navv navtop">
 		  			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
 		  			 </div>
-		  	
+
 		  </li>
 		  <li class="hot-rent-item" @click="goodsdetail">
 		  	         <img src="../assets/Home/今日进程.png" alt="">
@@ -163,7 +163,7 @@
 		  			 <div class="navv navtop">
 		  			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
 		  			 </div>
-		  	
+
 		  </li>
 		</ul>
 	</van-tab>
@@ -200,7 +200,7 @@ export default {
   },
 	methods: {
       onClick(name, title) {
-      
+
     },
 	search() {
 	  this.$router.push({
@@ -224,9 +224,9 @@ export default {
 	}
 	.loimg{
 		position:absolute;
-		z-index: 0; 
+		z-index: 0;
 		width: 100%;
-		left: 0px; 
+		left: 0px;
 		top:0px;
 	}
   .van-search{
@@ -307,7 +307,7 @@ export default {
 	}
 	.imgsize{
 		width: 40px;
-		height: 40px; 
+		height: 40px;
 		margin-bottom: 3px;
 	}
 	.vantop{
@@ -367,7 +367,7 @@ export default {
 	}
 	.imgsizee{
 		width: 60px;
-		height: 60px; 
+		height: 60px;
 		margin-bottom: 3px;
 	}
 	.van-cell__value span{
@@ -383,4 +383,3 @@ export default {
 		font-size: 15px;
 	}
 </style>
-

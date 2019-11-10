@@ -47,15 +47,19 @@
     </div>
     <div style="height: 10px;"></div>
 
-    <div style="background: white;border-radius:5px;height: 100px; padding-top: 2px;">
+    <div style="background: white;border-radius:5px; padding-top: 2px;">
+      
+      <div>
+        <van-grid column-num="4" :border="false" gutter="3" square="false">
 
-      <van-grid column-num="4" :border="false" gutter="3" square="false">
+          <van-grid-item icon="photo-o" text="代付款" />
+          <van-grid-item icon="photo-o" text="待发货" />
+          <van-grid-item icon="photo-o" text="待收货" />
+          <van-grid-item icon="photo-o" text="退款/售后" />
+        </van-grid>
+      </div>
 
-        <van-grid-item icon="photo-o" text="代付款" />
-        <van-grid-item icon="photo-o" text="待发货" />
-        <van-grid-item icon="photo-o" text="待收货" />
-        <van-grid-item icon="photo-o" text="退款/售后" />
-      </van-grid>
+
     </div>
     <div style="height: 10px;"></div>
 
@@ -103,6 +107,16 @@
 
     </div>
     <div style="height: 10px;"></div>
+    <div>
+      <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
+        <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+        <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
+        <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
+        <van-tabbar-item replace to="/cart" icon="cart-o">购物车</van-tabbar-item>
+        <van-tabbar-item replace to="/mineIndex" icon="contact">我的</van-tabbar-item>
+        <router-view />
+      </van-tabbar>
+    </div>
 
   </div>
 

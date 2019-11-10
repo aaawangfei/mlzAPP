@@ -1,5 +1,6 @@
 <template>
-  <div style="background: #F2F2F2 !important;padding-bottom: 100%;">
+  <div style="background: #F2F2F2;height:100%;
+        position:fixed;width: 100%;">
     <div>
       <van-nav-bar title="个人中心" left-arrow @click-left="onClickLeft" />
     </div>

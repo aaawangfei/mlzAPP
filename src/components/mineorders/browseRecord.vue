@@ -37,18 +37,20 @@
             </div>
 
 
-            <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;">
+            <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;width: 100%;">
               <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
 
 
               <div style="display: flex; justify-content:space-between;">
 
+                  <span>￥3400</span>
+                  <div>
+                     <van-icon name="shopping-cart-o" />
+                  </div>
 
-                <span>￥3400</span>
-                <div>
-                   <van-icon name="shopping-cart-o" />
-                </div>
-                   
+
+
+
               </div>
 
             </div>

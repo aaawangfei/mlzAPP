@@ -42,15 +42,19 @@
 
 
           <div style="display: flex; justify-content: space-around;flex-direction: column;margin: 0px 8px;">
-            <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
+            <p style="font-size: 16px;
+          color: #333333;">齿轨轮轴 CONCON0328-040328-04 0A78</p>
 
             <div style="display: flex;justify-content: space-between;">
-              <span>￥3400</span>
-              <span>1</span>
+              <span style="font-size: 13px;
+          color: #333333;">￥3400</span>
+              <span style="font-size: 13px;
+          color: #333333;">1</span>
             </div>
 
           </div>
         </div>
+
 
       </div>
     </div>
@@ -73,18 +77,23 @@
       </div>
       <div style="display: flex; justify-content:space-between;">
         <span class="textspan">运费</span>
-        <span class="textspan">￥</span>
+        <span class="textspan">0</span>
       </div>
       <div style=" background: #F2F2F2; height: 1px;"></div>
       <div style="display: flex; justify-content:flex-end;line-height: 40px;">
 
         <span class="textspan">需付款 :</span>
-        <span class="textspan">￥3476</span>
+        <span style=" font-size: 13px;
+    color: #E33B3E;
+    padding-top: 7px;">￥3476</span>
       </div>
       <div style=" background: #F2F2F2; height: 1px;"></div>
-      <div style="display: flex; justify-content:flex-end;line-height: 40px;">
-        <span style="margin-right: 10px; background: #E33B3E;color: white;">提醒发货</span>
-        <span style="margin-right: 10px;">申请退款</span>
+      <div style="display: flex; justify-content:flex-end;line-height: 40px;padding-top: 10px;">
+        <van-button class="Attribute" round hairline type="info" color="#666666" plain size="mini">提醒发货</van-button>
+        <van-button class="Attribute" round hairline type="info" color="#E33B3E" size="mini">申请退款</van-button>
+
+
+
       </div>
     </div>
 
@@ -100,9 +109,14 @@
 </template>
 
 <script>
-
-
-
+  export default {
+    methods: {
+      onClickLeft() {
+        console.log(this.active);
+        this.$router.go(-1);
+      },
+    }
+  }
 </script>
 
 <style scoped>
@@ -150,6 +164,13 @@
     width: 100%;
     height: 90px;
     border-radius: 100%;
+
+  }
+
+  .Attribute {
+    padding-right: 10px;
+    padding-left: 10px;
+
 
   }
 </style>

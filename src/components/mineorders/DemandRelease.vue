@@ -33,7 +33,7 @@
                 <div style="display: flex;justify-content:space-between;line-height: 30px;text-align: center;">
                   <span > 草稿</span>
                   <div style="display: flex;justify-content:space-between;line-height: 30px;;">
-                    <van-button round hairline type="primary" color="#E33B3E" plain size="small"">发布</van-button>
+                    <van-button round hairline type="primary" color="#E33B3E" plain size="small" style="padding-left: 20px;padding-right: 20px;">发布</van-button>
                     <van-button round hairline type="primary" color="#DAD7D7" plain size="small">取消推广</van-button>
 
 
