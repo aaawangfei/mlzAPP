@@ -6,7 +6,7 @@
 				<van-icon name="arrow-left" />
 			</span>
 			<span class="rightnav">
-				<van-search shape="round" placeholder="采煤机配件降价" v-model="value" />
+				<van-search @click="search" shape="round" placeholder="采煤机配件降价" v-model="value" />
 				</span>
 		</div>
 		<div class="row">
@@ -39,20 +39,20 @@
 		</div>
 		<van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
   <van-cell v-for="item in list" :key="item" :title="item"/>
-	      <div class="nav bor-bottom">
-	      <div class="leftimg">
-	      	<img class="img" src="../assets/Home/今日进程.png" alt="">
-	      </div>
-	      <div class="rightwords">
-	      	<p class="right">
-	      		<span class="tit titlist">采煤机配件导向靶CON02</span>
-	      		<span class="time timelist">￥3473</span>
-	      		</p>
-	      	<p class="Introduction icontop">
-	      		<van-icon name="award-o" />
-	      		</p>
-	      </div>
-	      </div>
+	     <div class="nav bor-bottom">
+	     <div class="leftimg">
+	     	<img class="img" src="../assets/Home/dxb.png" alt="">
+	     </div>
+	     <div class="rightwords">
+	     	<p class="right">
+	     		<span class="tit titlist">采煤机配件导向靶CON02</span>
+	     		</p>
+	     	<p>
+	     				<span class="time timelist">￥3473</span>
+	     		<van-icon class="Introduction icontop" color="#E33B3E" name="shopping-cart-o" />
+	     		</p>
+	     </div>
+	     </div>
 </van-list>
 </div>
 </template>
@@ -100,7 +100,12 @@ export default {
 	methods: {
     onLoad() {
         this.loading = false; 
-    }
+    },
+	search() {
+	  this.$router.push({
+		    path: '/search'
+	})
+	}
   }
 }
 </script>
@@ -139,8 +144,9 @@ export default {
 		padding-bottom: 20px;
 	}
 	.right{
-		margin-top: 21px;
-		float: left;
+		margin-top: 18px;
+		text-align: left;
+		margin-right: 16px;
 	}
 	.tit{
 		float: left;
@@ -148,21 +154,23 @@ export default {
 		color: #FFFFFF;
 		font-size: 14px;
 		width: 100%;
-    text-align: left;
-		margin-top: 3px;
+        text-align: left;
+		margin-top: 6px;
+		white-space: nowrap;  
+		text-overflow:ellipsis; 
+		overflow:hidden;
 	}
 	.time{
 		float: left;
-	  margin-left: 10px;
-	  color: #FFFFFF;
+	    margin-left: 10px;
+	    color: #FFFFFF;
 		font-size: 10px;
-		width: 100%;
-    text-align: left;
+        text-align: left;
 		margin-top: 10px;
 	}
 	.Introduction{
 		float: right;
-		margin-right: 18px;
+		margin-right: 16px;
 		font-size: 13px;
 		margin-top: 32px;
 	}
@@ -184,13 +192,13 @@ export default {
 		color: #E33B3E;
 	}
 	.icontop{
-		margin-top: 57px;
+		margin-top: 10px;
 	}
 	.bor-bottom{
 		border-bottom: 1px solid #F2F2F2;
 	}
 	.van-search {
 	  padding: 10px 16px;
-		margin-top: 5px;
+	  margin-top: 5px;
 	}
 </style>

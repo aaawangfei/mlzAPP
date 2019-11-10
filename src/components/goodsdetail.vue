@@ -26,7 +26,7 @@
 		<div class="hot-rent-item">
 		        <van-swipe @change="onChange">
                    <van-swipe-item>
-	                  <img src="../assets/Home/今日进程.png" alt="">
+	                  <img src="../assets/Home/cl.png" alt="">
                    </van-swipe-item>
                  <van-swipe-item>
 	                  <img src="../assets/Home/我的行程.png" alt="">
@@ -117,7 +117,7 @@
 <div class="hot-rent-ite">
 <div class="nav">
 		<div class="leftimg">
-			<img class="img" src="../assets/Home/今日进程.png" alt="">
+			<img class="img" src="../assets/Home/artisan.png" alt="">
 		</div>
 		<div class="rightwords">
 			<p class="right">
@@ -131,20 +131,20 @@
 		</div>
 		<van-grid style="margin-top: -15px;" :column-num="4" :border="false">
 					<van-grid-item to="/windCar">
-						<img class="imgsize" src="../assets/Home/申请搭车.png">
-						<div class="small-size">配件区</div>
+						<img class="imgsize" src="../assets/Home/dxb.png">
+						<div class="small-size">导向靶</div>
 					</van-grid-item>
 					<van-grid-item to="/tadayprogress">
-						<img class="imgsize" src="../assets/Home/今日进程.png">
-						<div class="small-size">耗材区</div>
+						<img class="imgsize" src="../assets/Home/dxb.png">
+						<div class="small-size">导向靶</div>
 					</van-grid-item>
 					<van-grid-item to="/garageindex">
-						<img class="imgsize" src="../assets/Home/car_home.png">
-						<div class="small-size">设备区</div>
+						<img class="imgsize" src="../assets/Home/dxb.png">
+						<div class="small-size">导向靶</div>
 					</van-grid-item>
 					<van-grid-item to="/myTravil">
-						<img class="imgsize" src="../assets/Home/我的行程.png">
-						<div class="small-size">二手区</div>
+						<img class="imgsize" src="../assets/Home/dxb.png">
+						<div class="small-size">导向靶</div>
 					</van-grid-item>
 		
 				</van-grid>
@@ -276,6 +276,7 @@ export default {
 	.position{
 		margin-top: -3px;
 		vertical-align:middle;
+		color:#E33B3E;
 	}
 	.loccolor{
 		color: #666666;
@@ -289,9 +290,9 @@ export default {
 		width: 20%;
 	}
 	.img{
-		width: 40px;
+		width: 60px;
 		display: block;
-		margin: 27px auto;
+		margin: 16px auto;
 		text-align: center;
 	}
 	.rightwords{
@@ -310,7 +311,7 @@ export default {
 	    text-align: left;
 		margin-top: 3px;
 		color: #222222;
-		font-weight: 400;
+		font-weight: 450;
 	}
 	.time{
 		float: left;
@@ -326,9 +327,8 @@ export default {
 		margin-top: 32px;
 	}
 	.imgsize{
-		width: 40px;
-		height: 40px; 
-		margin-bottom: 3px;
+		width: 60px;
+		margin-bottom: 6px;
 	}
 	.morepad{
 		padding: 10px 10px;

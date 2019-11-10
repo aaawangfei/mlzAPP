@@ -1,83 +1,50 @@
 <template>
-
-  <div>
-
-      <div >
-        <van-nav-bar title="购物车" right-text="编辑" @click-right="onClickRight" :border="false" />
-      </div>
-
-      <div style="margin-bottom: 100px;">
-
-        <van-list v-model="loading" :finished="finished" @load="onLoad">
-          <van-cell v-for="item in goods" :key="item.id" :name="item.id">
-            <div style=" padding: 10px;">
-              <div style="display: flex; border-radius: 5px;">
-                <div>
-                  <van-checkbox name="item" v-model="item.checked">
-                    <div>
-                      <van-image width="100" height="100" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-                    </div>
-                  </van-checkbox>
-                </div>
-                <div style="display: flex; justify-content: space-between;flex-direction: column;margin: 0px 8px;">
-                  <p>齿轨轮轴 CONCON0328-040328-04 0A78</p>
-                  <div style="display: flex;justify-content: flex-star;">
-                    <span>￥3400</span>
-                    <van-stepper style="margin-left: 10%;" v-model="item.num" />
-                  </div>
-                </div>
-              </div>
+  <div style="background: #F2F2F2;margin-bottom: 120px;">
+      <van-nav-bar title="购物车" right-text="编辑" @click-right="onClickRight" />
+      <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
+        <van-cell v-for="item in goods" :key="item.id" :name="item.id">
+          <div style="float: left;width: 44%;">
+            <van-checkbox name="item" v-model="item.checked"> 
+                <img width="100" src="../../assets/Home/cglz.png" />
+            </van-checkbox>
+          </div>
+          <div style="float: right;width: 56%;margin-top: 11px;">
+            <span style="width: 100%;display: block;word-wrap: break-word;word-break: break-all;overflow: hidden;">齿轨轮轴 CONCON0328-040328-04 0A78</span>
+            <div style="overflow: hidden;">
+              <span style="float: left;color: #E33B3E;line-height: 28px;">￥3400</span>
+              <van-stepper style="float: right;" v-model="item.num" />
             </div>
-
-          </van-cell>
-
-        </van-list>
-
-
-      </div>
-
-
-
-      <div>
-        <div>
+          </div>
+        </van-cell>
+      </van-list>
           <div class="submi-bar__bar">
             <div v-if="show" class="van-submit-bar">
-              <van-checkbox v-model="checked">全选</van-checkbox>
-              <span style="text-align: -moz-center; width: 40%;"> 合计:￥7386</span>
-              <span style="text-align: -moz-center; width: 40%;"> 去结算</span>
+              <van-checkbox style="text-align:left; width:30%;" v-model="checked">全选</van-checkbox>
+              <span style="text-align:right; width:40%;"> 合计:￥7386</span>
+              <span style="text-align:right; width:40%;margin-right: 35px;">
+				  <van-button round color="#E33B3E">去结算(3)</van-button>
+			  </span>
             </div>
             <div v-else class="van-submit-bar">
-
-              <van-checkbox v-model="checked">全选</van-checkbox>
-
-              <span style="text-align: -moz-center; width: 40%;"></span>
-              <span style="text-align: -moz-center;width: 40%"> 删除</span>
+          
+              <van-checkbox style="text-align:left; width:30%;" v-model="checked">全选</van-checkbox>
+          
+              <span style="text-align:right; width:40%;"></span>
+              <span style="text-align:right; width:40%;margin-right: 35px;">
+				  <van-button style="padding: 0 24px;" round color="#E33B3E" plain>删除</van-button>
+			  </span>
             </div>
-
-
-            <!-- <van-submit-bar :price="totalPrice" :disabled="!checkedGoods.length" :button-text="submitBarText" @submit="onSubmit" /> -->
           </div>
-
-
-        </div>
-
-
-      </div>
-      <div>
-        <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
-          <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
-          <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
-          <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
-          <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
-          <van-tabbar-item replace to="/contact" icon="contact">我的</van-tabbar-item>
-          <router-view />
-        </van-tabbar>
-      </div>
-
-    </div>
-
+     <van-tabbar active-color="#E33B3E" inactive-color="#000" v-model="active">
+       <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+       <van-tabbar-item replace to="/apps" icon="apps-o">分类</van-tabbar-item>
+       <van-tabbar-item replace to="/orders" icon="orders-o">求购</van-tabbar-item>
+       <van-tabbar-item icon="cart-o">购物车</van-tabbar-item>
+     	<van-tabbar-item replace to="/mineIndex" icon="contact">我的</van-tabbar-item>
+     	<router-view />
+     </van-tabbar>
+  </div>
 </template>
-
 <script>
   import Vue from 'vue';
   import Vant from 'vant';
@@ -96,7 +63,6 @@
   Vue.use(Vant);
   Vue.use(Tabbar).use(TabbarItem);
   export default {
-
     components: {
       [Card.name]: Card,
       [Checkbox.name]: Checkbox,
@@ -218,10 +184,13 @@
     }
   }
 </script>
-
-
 <style lang="less" scoped>
-
+  p {
+    margin: 0px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   .cell-text {
     margin: 0px 0px 0px 0px;
@@ -234,18 +203,15 @@
   .card-goods {
     padding: 10px 0;
     background-color: #fff;
-
     &__item {
       position: relative;
       background-color: #fafafa;
-
       .van-checkbox__label {
         width: 100%;
         height: auto; // temp
         padding: 0 10px 0 15px;
         box-sizing: border-box;
       }
-
       .van-checkbox__icon {
         top: 50%;
         left: 10px;
@@ -253,15 +219,34 @@
         position: absolute;
         margin-top: -10px;
       }
-
       .van-card__price {
         color: #f44;
       }
-
-
     }
   }
-
+  .van-submit-bar {
+    bottom: 50px !important;
+	padding: 10px 0;
+  }
+  .van-submit-bar__button{
+	  margin-right: 16px;
+	  border-radius: 40px;
+  }
+  .van-cell{
+	  background: #F2F2F2;
+	  padding: 0 16px 10px 16px;
+  }
+  .van-cell__value--alone{
+	  background: #FFFFFF;
+	  padding: 10px 6px 5px 6px;
+	  border-radius: 5px;
+  }
+  .van-nav-bar{
+	  background: #F2F2F2;
+  }
+  .van-button--large{
+	  line-height: 50px;
+    }
   .submi-bar__bar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -277,13 +262,8 @@
     // font-size: 14px;
     // left: 0px;
     // right: 0px;
-     //bottom: 50px;
+    // bottom: 50px;
   }
-
-  div {
-    text-align: center
-  }
-
   .van-submit-bar {
     padding-left: 20px;
 
@@ -291,7 +271,7 @@
 
     line-height: 50px;
     display: flex;
-    bottom: 50px !important;
+    bottom: 50px!important;
   }
 
 
@@ -328,5 +308,9 @@
       text-align: left;
       border-radius:5px ;
       background-color: #FFFFFF;
+  }
+  .van-button--normal{
+	  padding: 0 16px;
+	  font-size: 16px;
   }
 </style>
