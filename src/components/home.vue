@@ -10,19 +10,19 @@
 	<van-search @click="search" shape="round" placeholder="采煤机配件降价" v-model="value" />
 	<img width="90%" style="position: relative;" src="../assets/Home/banner.png"/>
 	<van-row style="width: 96%;margin: 0 auto;">
-				<van-col span="6">
+				<van-col span="6" @click="classify">
 					<img class="imgsizee" src="../assets/Home/Accessories.png">
 					<div class="small-sizee">配件区</div>
 				</van-col>
-				<van-col span="6">
+				<van-col span="6" @click="classify">
 					<img class="imgsizee" src="../assets/Home/Material.png">
 					<div class="small-sizee">耗材区</div>
 				</van-col>
-				<van-col span="6">
+				<van-col span="6" @click="classify">
 					<img class="imgsizee" src="../assets/Home/Equipment.png">
 					<div class="small-sizee">设备区</div>
 				</van-col>
-				<van-col span="6">
+				<van-col span="6" @click="classify">
 					<img class="imgsizee" src="../assets/Home/Second-hand.png">
 					<div class="small-sizee">二手区</div>
 				</van-col>
@@ -31,42 +31,42 @@
 			<div class="hzsj">
 			<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="合作商家" is-link value="查看更多" />
 			<van-row class="hzsjrow">
-						<van-col span="6">
+						<van-col span="6" @click="merchants">
 							<img class="imgsize" src="../assets/Home/Heaven.png">
 							<div class="small-size">天地煤机</div>
 						</van-col>
-						<van-col span="6">
+						<van-col span="6" @click="merchants">
 							<img class="imgsize" src="../assets/Home/Via.png">
 							<div class="small-size">威盛特</div>
 						</van-col>
-						<van-col span="6">
+						<van-col span="6" @click="merchants">
 							<img class="imgsize" src="../assets/Home/wns.png">
 							<div class="small-size">维诺斯</div>
 						</van-col>
-						<van-col span="6">
+						<van-col span="6" @click="merchants">
 							<img class="imgsize" src="../assets/Home/machinery.png">
 							<div class="small-size">云城机械</div>
 						</van-col>
-			            <van-col span="6">
+			            <van-col span="6" @click="merchants">
 			            	<img class="imgsize" src="../assets/Home/artisan.png">
 			            	<div class="small-size">思匠德</div>
 			            </van-col>
-			            <van-col span="6">
+			            <van-col span="6" @click="merchants">
 			            	<img class="imgsize" src="../assets/Home/amstl.png">
 			            	<div class="small-size">艾蒙斯特朗</div>
 			            </van-col>
-			            <van-col span="6">
+			            <van-col span="6" @click="merchants">
 			            	<img class="imgsize" src="../assets/Home/Aerospapany.png">
 			            	<div class="small-size">航天重工</div>
 			            </van-col>
-			            <van-col span="6">
+			            <van-col span="6" @click="merchants">
 			            	<img class="imgsize" src="../assets/Home/xianzz.png">
 			            	<div class="small-size">西安重装</div>
 			            </van-col> 
 					</van-row>
 					</div>
 					<div class="hzsj">
-					<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="热销二手" is-link value="查看更多" />
+					<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="热销二手" to="/Hotsellsecondnd" is-link value="查看更多" />
 					<van-row class="hzsjrow">
 								<van-col span="6">
 									<img class="imgsize" src="../assets/Home/meiji.png">
@@ -231,7 +231,17 @@ export default {
 	  this.$router.push({
 		    path: '/goodsdetail'
 	})
-   }
+    },
+   classify() {
+   	  this.$router.push({
+   		    path: '/apps'
+   	})
+   },
+   merchants() {
+   	  this.$router.push({
+   		    path: '/merchants'
+   	})
+   },
  }
 }
 </script>

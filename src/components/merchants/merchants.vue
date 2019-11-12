@@ -80,9 +80,9 @@
  
 </van-tabs>
   <van-tabbar active-color="#07c160" inactive-color="#000" v-model="active" route>
-  <van-tabbar-item icon="shop-o">商品</van-tabbar-item>
-  <van-tabbar-item icon="qr">分类</van-tabbar-item>
-  <van-tabbar-item icon="contact">关于我们</van-tabbar-item>
+  <van-tabbar-item replace to="/goods" icon="shop-o">商品</van-tabbar-item>
+  <van-tabbar-item replace to="/goodsclass" icon="qr">分类</van-tabbar-item>
+  <van-tabbar-item replace to="/Aboutus" icon="contact">关于我们</van-tabbar-item>
 	<router-view />
 </van-tabbar>
 </div>

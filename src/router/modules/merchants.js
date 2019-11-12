@@ -44,5 +44,10 @@ export default [
 	  path: '/search',
 	  name: 'search',
 	  component: () => import('@/components/merchants/search')
+	},
+	{
+	  path: '/Hotsellsecondnd',
+	  name: 'Hotsellsecondnd',
+	  component: () => import('@/components/merchants/Hotsellsecondnd')
 	}
 ]
