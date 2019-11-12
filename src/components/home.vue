@@ -29,7 +29,7 @@
 
 			</van-row>
 			<div class="hzsj">
-			<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="合作商家" is-link value="查看更多" />
+			<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="合作商家" is-link to="/apps" value="查看更多" />
 			<van-row class="hzsjrow">
 						<van-col span="6" @click="merchants">
 							<img class="imgsize" src="../assets/Home/Heaven.png">
@@ -68,19 +68,19 @@
 					<div class="hzsj">
 					<van-cell style="border-radius: 10px 10px 0 0;" :border="false" title="热销二手" to="/Hotsellsecondnd" is-link value="查看更多" />
 					<van-row class="hzsjrow">
-								<van-col span="6">
+								<van-col span="6" @click="goodsdetail">
 									<img class="imgsize" src="../assets/Home/meiji.png">
 									<div class="small-size">采煤机</div>
 								</van-col>
-								<van-col span="6">
+								<van-col span="6" @click="goodsdetail">
 									<img class="imgsize" src="../assets/Home/chilun.png">
 									<div class="small-size">齿轮</div>
 								</van-col>
-								<van-col span="6">
+								<van-col span="6" @click="goodsdetail">
 									<img class="imgsize" src="../assets/Home/peijian.png">
 									<div class="small-size">煤机配件</div>
 								</van-col>
-								<van-col span="6">
+								<van-col span="6" @click="goodsdetail">
 									<img class="imgsize" src="../assets/Home/zhuanhuanqi.png">
 									<div class="small-size">电磁转换器</div>
 								</van-col>
@@ -97,7 +97,10 @@
     						 <span class="bor">打3折</span>
     						 </p>
     			 <div class="navv">
-    			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
+    			 	<span class="leftnav cored">￥3455</span>
+					<span class="rightnav iconcolo">
+					<img class="shop" src="../assets/Home/shop.png" alt="">
+					</span>
     			 </div>
     	
     </li>
@@ -108,7 +111,10 @@
 							 <span class="bor">打3折</span>
 							 </p>
     			 <div class="navv">
-    			 	<span class="leftnav cored">￥3045</span><span class="rightnav iconcolo">图标</span>
+    			 	<span class="leftnav cored">￥3045</span>
+					<span class="rightnav iconcolo">
+					<img class="shop" src="../assets/Home/shop.png" alt="">
+					</span>
     			 </div>
     	
     </li>
@@ -119,7 +125,10 @@
     						 <span class="bor">打3折</span>
     						 </p>
     			 <div class="navv">
-    			 	<span class="leftnav cored">￥2563</span><span class="rightnav iconcolo">图标</span>
+    			 	<span class="leftnav cored">￥2563</span>
+					<span class="rightnav iconcolo">
+					<img class="shop" src="../assets/Home/shop.png" alt="">
+					</span>
     			 </div>
     	
     </li>
@@ -130,7 +139,10 @@
     						 <span class="bor">打3折</span>
     						 </p>
     			 <div class="navv">
-    			 	<span class="leftnav cored">￥2798</span><span class="rightnav iconcolo">图标</span>
+    			 	<span class="leftnav cored">￥2798</span>
+					<span class="rightnav iconcolo">
+					<img class="shop" src="../assets/Home/shop.png" alt="">
+					</span>
     			 </div>
     </li>
   </ul>
@@ -146,7 +158,10 @@
 		    						 <span class="bor">打3折</span>
 		    						 </p>
 		    			 <div class="navv">
-		    			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
+		    			 	<span class="leftnav cored">￥3455</span>
+							<span class="rightnav iconcolo">
+							<img class="shop" src="../assets/Home/shop.png" alt="">
+							</span>
 		    			 </div>
 		    	
 		    </li>
@@ -157,7 +172,10 @@
 		  							 <span class="bor">打3折</span>
 		  							 </p>
 		    			 <div class="navv">
-		    			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
+		    			 	<span class="leftnav cored">￥3455</span>
+							<span class="rightnav iconcolo">
+							<img class="shop" src="../assets/Home/shop.png" alt="">
+							</span>
 		    			 </div>
 		    	
 		    </li>
@@ -168,7 +186,10 @@
 		    						 <span class="bor">打3折</span>
 		    						 </p>
 		    			 <div class="navv">
-		    			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">图标</span>
+		    			 	<span class="leftnav cored">￥3455</span>
+							<span class="rightnav iconcolo">
+							<img class="shop" src="../assets/Home/shop.png" alt="">
+							</span>
 		    			 </div>
 		    	
 		    </li>
@@ -179,8 +200,10 @@
 		    						 <span class="bor">打3折</span>
 		    						 </p>
 		    			 <div class="navv">
-		    			 	<span class="leftnav cored">￥3455</span><span class="rightnav iconcolo">
-							图标
+		    			 	<span class="leftnav cored">￥3455</span>
+							<span class="rightnav iconcolo">
+							<img class="shop" src="../assets/Home/shop.png" alt="">
+							</span>
 							</span>
 		    			 </div>
 		    	
@@ -419,6 +442,10 @@ export default {
 	.textl{
 		text-align: left;
 		margin: 0;
+	}
+	.shop{
+		width: 13px!important;
+		margin-top: 2px!important;
 	}
 </style>
 

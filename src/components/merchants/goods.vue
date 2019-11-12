@@ -53,7 +53,7 @@
 		</div>
 		<van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
   <van-cell v-for="item in list" :key="item" :title="item"/>
-	      <div class="nav bor-bottom">
+	      <div class="nav bor-bottom" @click="goodsdetail">
 	      <div class="leftimg">
 	      	<img class="img" src="../../assets/Home/dxb.png" alt="">
 	      </div>
@@ -122,7 +122,12 @@ export default {
 	methods: {
     onLoad() {
         this.loading = false; 
-    }
+    },
+	goodsdetail() {
+	  this.$router.push({
+		    path: '/goodsdetail'
+	})
+	},
   }
 }
 </script>

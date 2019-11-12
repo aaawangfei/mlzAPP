@@ -13,42 +13,42 @@
 		<div v-if="activeIndex === 0">
 			<p class="appstit">采掘设备配件</p>
 			<van-grid :column-num="3" :border="false">
-						<van-grid-item to="/windCar">
+						<van-grid-item to="/goodslist">
 							<img class="imgsize" src="../../assets/Home/njz.png">
 							<div class="small-size">采煤机配件</div>
 						</van-grid-item>
-						<van-grid-item to="/tadayprogress">
+						<van-grid-item to="/goodslist">
 							<img class="imgsize" src="../../assets/Home/cglz.png">
 							<div class="small-size">掘进机配件</div>
 						</van-grid-item>
-						<van-grid-item to="/garageindex">
+						<van-grid-item to="/goodslist">
 							<img class="imgsize" src="../../assets/Home/cl.png">
 							<div class="small-size">连载机配件</div>
 						</van-grid-item>
-						<van-grid-item to="/myTravil">
+						<van-grid-item to="/goodslist">
 							<img class="imgsize" src="../../assets/Home/njz.png">
 							<div class="small-size">采煤机配件</div>
 						</van-grid-item>
-			      <van-grid-item to="/garageindex">
+			      <van-grid-item to="/goodslist">
 			      	<img class="imgsize" src="../../assets/Home/cglz.png">
 			      	<div class="small-size">掘瞄机配件</div>
 			      </van-grid-item>
-			      <van-grid-item to="/myTravil">
+			      <van-grid-item to="/goodslist">
 			      	<img class="imgsize" src="../../assets/Home/cl.png">
 			      	<div class="small-size">二手区</div>
 			      </van-grid-item>
 					</van-grid>
 						<p class="appstit">运输设备配件</p>
 					<van-grid :column-num="3" :border="false">
-								<van-grid-item to="/windCar">
+								<van-grid-item to="/goodslist">
 									<img class="imgsize" src="../../assets/Home/njz.png">
 									<div class="small-size">采煤机配件</div>
 								</van-grid-item>
-								<van-grid-item to="/tadayprogress">
+								<van-grid-item to="/goodslist">
 									<img class="imgsize" src="../../assets/Home/cglz.png">
 									<div class="small-size">掘进机配件</div>
 								</van-grid-item>
-								<van-grid-item to="/garageindex">
+								<van-grid-item to="/goodslist">
 									<img class="imgsize" src="../../assets/Home/cl.png">
 									<div class="small-size">连载机配件</div>
 								</van-grid-item>
