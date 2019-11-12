@@ -22,16 +22,6 @@
         </div>
         <div class="col-xs-5ths">
           <van-dropdown-menu>
-             <van-dropdown-item v-model="value3" :options="option3" />
-          </van-dropdown-menu>
-        </div>
-        <div class="col-xs-5ths">
-          <van-dropdown-menu>
-             <van-dropdown-item v-model="value4" :options="option4" />
-          </van-dropdown-menu>
-        </div>
-        <div class="col-xs-5ths">
-          <van-dropdown-menu>
              <van-icon class="iconr" name="apps-o" />
           </van-dropdown-menu>
         </div>
@@ -60,26 +50,16 @@ export default {
         loading: false,
         finished: false,
         option1: [
-        { text: '价格', value: 0 },
-        { text: '价格1', value: 1 },
-        { text: '价格2', value: 2 },
-		{ text: '价格3', value: 3 }
+        { text: '方式', value: 0 },
+        { text: '全部', value: 1 },
+        { text: '出售', value: 2 },
+		{ text: '出租', value: 3 }
         ],
         option2: [
-        { text: '交货期', value: 'a' },
+        { text: '分类', value: 'a' },
         { text: '1月', value: 'b' },
         { text: '2月', value: 'c' },
-        ],
-		option3: [
-		{ text: '仓库', value: 'a' },
-		{ text: '斯柯达', value: 'b' },
-		{ text: '耐克', value: 'c' },
-		],
-		option4: [
-		{ text: '类型', value: 'a' },
-		{ text: '塑料', value: 'b' },
-		{ text: '钢铁', value: 'c' },
-		]
+        ]
     }
   },
 	methods: {
