@@ -74,6 +74,11 @@ export default [
     path: '/purchaseOrder',
     name: 'purchaseOrder',
     component: () => import('@/components/mineorders/purchaseOrder')
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    component: () => import('@/components/mineorders/shop')
   }
 
 
